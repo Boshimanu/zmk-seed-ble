@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
-
 / {
     behaviors {
         bs: bs {
@@ -14,7 +13,6 @@
             tapping-term-ms = <120>;
         };
     };
-
 
 //     behaviors {
 //         layer_enter: layer_enter{ 
@@ -52,7 +50,7 @@
    AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
    &bs LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
    &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none  &kp C_MUTE AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                              &kp LGUI &kp RET &mo 1                            &mo 2 &kp SPACE &kp LALT
+                              &mo 1  &kp RET  &kp LGUI                          &kp LALT &kp SPACE &mo 2
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -64,14 +62,14 @@
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
+
                         bindings = <
-   &kp TAB    &kp N1      
-   &kp N2     &kp N3       &kp N4       &kp N5                           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
-   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &bootloader  &none  &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
+   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5     &none &bootloader     &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
                                     &kp LGUI     &trans       &kp SPACE                            &kp RET  &trans   &kp LALT
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+                        sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
                 };
 
 //________________________________________________________________________________________________________________________________________________
@@ -81,6 +79,7 @@
 // | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
+
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans                       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
@@ -97,6 +96,7 @@
 // | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
+
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans                       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
@@ -105,9 +105,6 @@
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
-
-
-
 
         };
 };
