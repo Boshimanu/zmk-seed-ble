@@ -4,7 +4,7 @@
 
 / {
     behaviors {
-        bs: bs {
+        backspace: backspace {
             compatible = "zmk,behavior-hold-tap";
             label = "BACKSPACE";
             bindings = <&kp>, <&kp>;
@@ -23,10 +23,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |  MUTE  |  |        |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |                    | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB                          &kp Q &kp W &kp F &kp P &kp G                   &kp J &kp L  &kp U     &kp Y   &kp ;     &kp BSLH
-   &bs LALT(BACKSPACE) BACKSPACE    &kp A &kp R &kp S &kp T &kp D                   &kp H &kp N  &kp E     &kp I   &kp O     &kp SQT
-   &kp LSHFT                        &kp Z &kp X &kp C &kp V &kp B &kp C_MUTE  &none &kp N &kp M  &kp COMMA &kp DOT &kp SLASH &kp RSHFT
-                                         &kp LGUI &mo 1 &kp SPACE                   &kp RET &mo 2 &kp LALT
+   &kp TAB                               &kp Q &kp W &kp F &kp P &kp G                   &kp J &kp L  &kp U     &kp Y   &kp ;     &kp BSLH
+   &backspace LALT(BACKSPACE) BACKSPACE  &kp A &kp R &kp S &kp T &kp D                   &kp H &kp N  &kp E     &kp I   &kp O     &kp SQT
+   &kp LSHFT                             &kp Z &kp X &kp C &kp V &kp B &kp C_MUTE  &none &kp N &kp M  &kp COMMA &kp DOT &kp SLASH &kp RSHFT
+                                              &kp LGUI &mo 1 &kp SPACE                   &kp RET &mo 2 &kp LALT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
