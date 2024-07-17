@@ -32,22 +32,11 @@
                         label = "ZM_autoshift";
                         #binding-cells = <2>;
                         tapping-term-ms = <150>;
-                        quick-tap-ms = <70>;
+                        quick-tap-ms = <250>;
                         flavor = "balanced";
                         bindings = <&kp &kp>;
         };
     };            
-
-//     behaviors {
-//         as: auto_shift {
-//             compatible = "zmk,behavior-hold-tap";
-//             #binding-cells = <2>;
-//             tapping_term_ms = <120>;
-//             quick_tap_ms = <50>;
-//             //flavor = "tap-preferred";
-//             bindings = <&kp>, <&kp>;
-//         };
-//     };
 
         keymap {
                 compatible = "zmk,keymap";
