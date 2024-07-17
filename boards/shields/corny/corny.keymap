@@ -32,7 +32,7 @@
                         label = "ZM_autoshift";
                         #binding-cells = <2>;
                         tapping-term-ms = <130>;
-                        quick-tap-ms = <0>;
+                        quick-tap-ms = <50>;
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
