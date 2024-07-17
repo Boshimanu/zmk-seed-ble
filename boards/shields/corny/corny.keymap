@@ -4,7 +4,7 @@
 
 / {
     behaviors {
-        bs: backspace {
+        bs: bs {
             compatible = "zmk,behavior-hold-tap";
             label = "BACKSPACE";
             bindings = <&kp>, <&kp>;
