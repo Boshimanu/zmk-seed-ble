@@ -17,10 +17,10 @@
 
 
     behaviors {
-        layer-enter:layer-enter{ 
+        layer_enter: layer_enter{ 
             compatible = "zmk, behavior-holt-tap";
             label = "LAYER-ENTER";
-            binding = <&mo>, <&kp>;
+            bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <120>;
         };    
@@ -51,7 +51,7 @@
    AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
    &bs LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
    &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none     &kp C_MUTE AS(N) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                             &kp LGUI &layer-enter 1 RET &kp &mo3    &kp RET &layer-enter 2 SPACE &kp LALT
+                             &kp LGUI &layer_enter 1 RET &kp &mo3    &kp RET &layer_enter 2 SPACE &kp LALT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
