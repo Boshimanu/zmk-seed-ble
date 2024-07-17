@@ -25,7 +25,7 @@
             //                    | GUI | LWR | SPC |                    | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                             &kp Q  &kp W  &kp F     &kp P    &kp G       &kp J  &kp L      &kp I      &kp O       &kp P      &kp BACKSLASH
+                                    &kp TAB &kp Q  &kp W  &kp F     &kp P    &kp G       &kp J  &kp L      &kp U      &kp Y       &kp SEMI   &kp BSLH
 &backspace LA(BACKSPACE) BACKSPACE  &kp A  &kp R  &kp S     &kp T    &kp D       &kp H  &kp N      &kp E      &kp I       &kp O      &kp SQT
 &kp LSHFT                           &kp Z  &kp X  &kp C     &kp V    &kp B       &kp K  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
                                                   &kp FSLH  &kp ESC  &kp LGUI    &mo 1  &kp SPACE  &kp RET
