@@ -32,8 +32,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <120>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            //quick_tap_ms = <0>;
+            //flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
@@ -51,7 +51,7 @@
    AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
    &bs LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
    &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none     &kp C_MUTE AS(N) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                              &kp LGUI &kp RET &mo 1                             &kp SPACE &mo 2 &kp LALT
+                              &kp LGUI &kp RET &mo 1                            &mo 2 &kp SPACE &kp LALT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
