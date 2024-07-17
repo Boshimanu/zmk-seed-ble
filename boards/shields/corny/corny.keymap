@@ -3,17 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        backspace: backspace {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BACKSPACE";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <120>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -25,13 +14,15 @@
             //                    | GUI | LWR | SPC |                    | ENT | RSE  | ALT |
 
             bindings = <
-                                    &kp TAB &kp Q  &kp W  &kp F     &kp P    &kp G       &kp J  &kp L      &kp U      &kp Y       &kp SEMI   &kp BSLH
-&backspace LA(BACKSPACE) BACKSPACE  &kp A  &kp R  &kp S     &kp T    &kp D       &kp H  &kp N      &kp E      &kp I       &kp O      &kp SQT
-&kp LSHFT                           &kp Z  &kp X  &kp C     &kp V    &kp B       &kp K  &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-                                                  &kp FSLH  &kp ESC  &kp LGUI    &mo 1  &kp SPACE  &kp RET
+&kp TAB    &kp Q  &kp W  &kp E     &kp R    &kp T       &kp Y       &kp U      &kp I    &kp O  &kp P      &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F    &kp G       &kp H       &kp J      &kp K    &kp L  &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V    &kp B       &kp C_MUTE  &none      &kp N    &kp M  &kp COMMA  &kp DOT
+                         &kp FSLH  &kp ESC  &kp LGUI    &mo 1       &kp SPACE  &kp RET
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         lower_layer {
@@ -59,10 +50,10 @@
             //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS     &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp BACKSPACE  &trans    &trans  &trans    &trans     &trans       &kp MINUS  &kp EQUAL    &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT      &trans    &trans  &trans    &trans     &trans       &none      &bootloader  &kp UNDER        &kp PLUS  &kp LBRC  &kp RBRC
-                                 &kp PIPE  &kp TILDE  &kp LGUI     &trans     &kp SPACE    &kp RET
+&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS     &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &trans    &trans  &trans    &trans     &trans       &kp MINUS  &kp EQUAL    &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &trans  &trans    &trans     &trans       &none      &bootloader  &kp UNDER        &kp PLUS  &kp LBRC  &kp RBRC
+                             &kp PIPE  &kp TILDE  &kp LGUI     &trans     &kp SPACE    &kp RET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
