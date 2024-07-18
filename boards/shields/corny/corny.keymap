@@ -82,7 +82,7 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                            &kp F6     &kp F7     &kp F8   &kp F9   &kp F10    &kp F11
+   &trans    &trans    &trans    &trans    &trans    &mk_capt                           &trans    &trans    &trans    &trans    &trans    &trans
    &trans    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)                            AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR  &kp RPAR   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
                                     &trans &trans &trans                        &trans  &trans  &trans
@@ -118,7 +118,7 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp LG(LC(LS(N4)))       &mk_capt                         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5   &kp F6                                         &kp F7     &kp F8   &kp F9   &kp F10    &kp F11 &kp F12
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
    &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5     &none &bootloader     &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
                                     &kp LGUI     &trans       &kp SPACE                            &kp RET  &trans   &kp LALT
