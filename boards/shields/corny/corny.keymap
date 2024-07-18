@@ -9,7 +9,7 @@
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -18,8 +18,8 @@
         mk_capt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <120>;
-            bindings = <&mt LG(LC(LS(N2)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
+            tapping-term-ms = <165>;
+            bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
         };
 //  KC.HT(KC.LCMD(KC.LSHIFT(KC.N2)), KC.LCMD(KC.LCTRL(KC.LSHIFT(KC.N4)))), 
 //  KC.HT(KC.LCMD(KC.LSHIFT(KC.N4)), KC.LCMD(KC.LSHIFT(KC.N5))),      
