@@ -4,6 +4,11 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
+        //Set The TAP Dance Mod Tap Timer - 200 Default
+        &mt {
+                tapping-term-ms = <200>;
+        };
+
         // BackSpace HOLD Tap
         behaviors {
                 bs: bs {
