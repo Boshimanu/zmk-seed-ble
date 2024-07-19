@@ -4,18 +4,18 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 //Set The TAP Dance Mod Tap Timer - 200 Default
-&mt {
-        tapping-term-ms = <200>;
-};
+// &mt {
+//         tapping-term-ms = <200>;
+// };
 
 / {
         // BackSpace HOLD Tap
         behaviors {
                 bs: bs {
-                compatible = "zmk,behavior-hold-tap";
-                bindings = <&kp>, <&kp>;
-                #binding-cells = <2>;
-                tapping-term-ms = <150>;
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&kp>, <&kp>;
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
                 };
         };
 
@@ -36,20 +36,20 @@
         // Capture Screen Key TAP Dance
         behaviors {
                 mk_capt: tap_dance_mod_tap {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>; //old 165
-                bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>; //old 165
+                        bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
                 };   
         };
 
         // Test Layer Key TAP Dance
         behaviors {
                 lt1_lt3_ret: tap_dance_mod_tap {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>; //old 165
-                bindings = <&lt 1 RET>, <&mo 3>;
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>; //old 165
+                        bindings = <&lt 1 RET>, <&mo 3>;
                 };   
         };
 
@@ -82,7 +82,7 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &trans    &trans    &trans    &trans    &trans    &mk_capt                           &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &mk_capt                          &trans    &trans    &trans    &trans    &trans    &trans
    &trans    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)                            AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR  &kp RPAR   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
                                     &trans &trans &trans                        &trans  &trans  &trans
