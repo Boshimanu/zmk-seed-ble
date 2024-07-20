@@ -68,7 +68,7 @@
    AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
    &bs LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
    &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none  &kp C_MUTE AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                              &mo 1   &lt 3 RET   &kp LGUI                          &kp LALT   &lt 2 SPACE   &mo 2
+                              &mo 3   &lt 1 RET   &kp LGUI                          &kp LALT   &lt 2 SPACE   &mo 4
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -82,7 +82,7 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &trans    &trans    &trans    &trans    &trans    &mk_capt                          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &mk_capt                          &trans     &trans     &trans   &trans   &trans     &trans
    &trans    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)                            AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR  &kp RPAR   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
                                     &trans &trans &trans                        &trans  &trans  &trans
@@ -99,9 +99,9 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &kp CARET &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &kp RPAR &kp BSPC
-   &trans &trans   &trans &trans   &trans   &trans                       &kp MINUS &kp LEFT &kp DOWN &kp RIGHT &kp BSLH &kp GRAVE
-   &trans &trans   &trans &trans   &trans   &trans    &none  &bootloader &kp UNDER &kp PLUS  &kp LBRC&kp RBRC  &kp PIPE &kp TILDE
+   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp RPAR &kp LG(LS(RBKT))
+   &trans &trans   &trans &trans   &trans   &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp BSLH &kp LG(LS(LBKT))
+   &trans &trans   &trans &trans   &trans   &trans    &none  &bootloader &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp PIPE &kp LC(LA(SPACE))
                              &kp LGUI &trans   &kp SPACE                    &kp RET   &trans    &kp LALT
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -125,10 +125,6 @@
                         >;
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
                 };
-
-
-
-
 
         };
 };
