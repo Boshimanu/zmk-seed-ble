@@ -11,18 +11,43 @@
 / {
         combos {
                 compatible = "zmk,combos";
-                //10+11 ST - LG
+                //Left CMD - ST
                 combo_lcmd {
                         timeout-ms = <50>;
-                        key-positions = <10 11>;
+                        key-positions = <15 16>;
                         bindings = <&kp LCMD>;
                 };
-                //33+32 NE - RG
+                //Right CMD - NE
                 combo_rcmd {
                         timeout-ms = <50>;
-                        key-positions = <32 33>;
+                        key-positions = <19 20>;
                         bindings = <&kp RCMD>;
                 };
+                //Left ALT - RS
+                combo_rcmd {
+                        timeout-ms = <50>;
+                        key-positions = <14 15>;
+                        bindings = <&kp LALT>;
+                };
+                //Right ALT - EI
+                combo_rcmd {
+                        timeout-ms = <50>;
+                        key-positions = <20 21>;
+                        bindings = <&kp RALT>;
+                };
+                //Left CTRL - AR
+                combo_rcmd {
+                        timeout-ms = <50>;
+                        key-positions = <13 14>;
+                        bindings = <&kp LCTRL>;
+                };
+                //Right CTRL - IO
+                combo_rcmd {
+                        timeout-ms = <50>;
+                        key-positions = <21 22>;
+                        bindings = <&kp RALT>;
+                };
+                
         };
 
         // BackSpace HOLD Tap
