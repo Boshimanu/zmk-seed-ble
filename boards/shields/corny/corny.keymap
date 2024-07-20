@@ -9,19 +9,15 @@
 // };
 
 / {
-        //10+11 ST - LG
         combos {
                 compatible = "zmk,combos";
+                //10+11 ST - LG
                 combo_lcmd {
                         timeout-ms = <50>;
                         key-positions = <10 11>;
                         bindings = <&kp LCMD>;
                 };
-        };
-
-        //33+32 NE - RG
-        combos {
-                compatible = "zmk,combos";
+                //33+32 NE - RG
                 combo_rcmd {
                         timeout-ms = <50>;
                         key-positions = <32 33>;
