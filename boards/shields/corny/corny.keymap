@@ -9,6 +9,26 @@
 // };
 
 / {
+        //10+11 ST - LG
+        combos {
+                compatible = "zmk,combos";
+                combo_lcmd {
+                        timeout-ms = <50>;
+                        key-positions = <10 11>;
+                        bindings = <&kp LCMD>;
+                };
+        };
+
+        //33+32 NE - RG
+        combos {
+                compatible = "zmk,combos";
+                combo_rcmd {
+                        timeout-ms = <50>;
+                        key-positions = <32 33>;
+                        bindings = <&kp RCMD>;
+                };
+        };
+
         // BackSpace HOLD Tap
         behaviors {
                 bs: bs {
@@ -52,7 +72,6 @@
         //                 bindings = <&lt 1 RET>, <&mo 3>;
         //         };   
         // };
-
 
         keymap {
                 compatible = "zmk,keymap";
@@ -100,11 +119,11 @@
 
                         bindings = <
    &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp RPAR &kp LG(LS(RBKT))
-   &trans &trans   &trans &trans   &trans   &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp BSLH &kp LG(LS(LBKT))
-   &trans &trans   &trans &trans   &trans   &trans    &none  &bootloader &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp PIPE &kp LC(LA(SPACE))
+   &trans &trans   &trans &trans   &trans   &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp BSLH &kp LG(LA(SQT))
+   &trans &trans   &trans &trans   &trans   &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp PIPE &kp LA(LC(SPACE))
                              &kp LGUI &trans   &kp SPACE                    &kp RET   &trans    &kp LALT
                         >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+                        sensor-bindings = <&inc_dec_kp UP DOWN>;
                 };
 
 //________________________________________________________________________________________________________________________________________________
