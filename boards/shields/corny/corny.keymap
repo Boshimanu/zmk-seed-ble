@@ -38,13 +38,13 @@
                 //Left CTRL - AR
                 combo_lctrl {
                         timeout-ms = <50>;
-                        key-positions = <13 14>, <14 15 16>;
+                        key-positions = <14 15 16>;
                         bindings = <&kp LCTRL>;
                 };
                 //Right CTRL - IO
                 combo_rctrl {
                         timeout-ms = <50>;
-                        key-positions = <21 22>, <19 20 21>;
+                        key-positions = <19 20 21>;
                         bindings = <&kp RCTRL>;
                 };
 
