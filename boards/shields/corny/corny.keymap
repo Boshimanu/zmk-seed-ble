@@ -39,14 +39,17 @@
                 combo_lctrl {
                         timeout-ms = <50>;
                         key-positions = <13 14>;
+                        key-position = <14 15 16>;
                         bindings = <&kp LCTRL>;
                 };
                 //Right CTRL - IO
                 combo_rctrl {
                         timeout-ms = <50>;
                         key-positions = <21 22>;
+                        key-position = <19 20 21>;
                         bindings = <&kp RCTRL>;
                 };
+
                 
         };
 
