@@ -4,10 +4,6 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define COMBOMS 25
 #define HOLDTAP 175
-//Set The TAP Dance Mod Tap Timer - 200 Default
-// &mt {
-//         tapping-term-ms = <200>;
-// };
 
 / {
         combos {
@@ -129,10 +125,10 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &trans    &trans    &trans    &trans    &trans    &mk_capt                          &trans     &trans     &trans   &trans   &trans     &trans
-   &trans    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)                            AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
-   &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR  &kp RPAR   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
-                                    &trans &trans &trans                        &trans  &trans  &trans
+        &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                            &kp F6     &kp F7     &kp F8     &kp F9   &kp F10  &kp F11    &kp F12
+        &trans    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)                            AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
+        &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR  &kp RPAR   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
+                                                &trans &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
                 };
@@ -146,10 +142,10 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                    &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp RPAR &kp LG(LS(RBKT))
-   &trans &trans   &trans &trans   &trans   &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp BSLH &kp LG(LA(SQT))
-   &trans &trans   &trans &trans   &trans   &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp PIPE &kp LA(LC(SPACE))
-                             &kp LGUI &trans   &kp SPACE                    &kp RET   &trans    &kp LALT
+        &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &mk_capt                     &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
+        &trans &trans   &trans &trans   &trans    &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))
+        &trans &trans   &trans &trans   &trans    &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp        &kp LA(LC(SPACE))
+                        &kp LGUI &trans   &kp SPACE                    &kp RET   &trans    &kp LALT
                         >;
                         sensor-bindings = <&inc_dec_kp UP DOWN>;
                 };
@@ -165,10 +161,10 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5   &kp F6                                         &kp F7     &kp F8   &kp F9   &kp F10    &kp F11 &kp F12
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
-   &kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5     &none &bootloader     &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
-                                    &kp LGUI     &trans       &kp SPACE                            &kp RET  &trans   &kp LALT
+        &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                           &kp F7     &kp F8   &kp F9   &kp F10    &kp F11  &kp F12
+        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &kp LEFT   &kp DOWN &kp UP   &kp RIGHT  &trans   &kp F12
+        &kp LSHFT   &kp F1        &kp F2        &kp F3        &kp F4        &kp F5     &none &bootloader     &kp F6     &kp F7   &kp F8   &kp F9     &kp F10  &kp F11
+                                        &kp LGUI     &trans       &kp SPACE                            &kp RET  &trans   &kp LALT
                         >;
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
                 };
