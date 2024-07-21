@@ -144,7 +144,7 @@
                         bindings = <
         &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &mk_capt                     &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
         &trans &trans   &trans &trans   &trans    &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))
-        &trans &trans   &trans &trans   &trans    &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp        &kp LA(LC(SPACE))
+        &trans &trans   &trans &trans   &trans    &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
                         &kp LGUI &trans   &kp SPACE                    &kp RET   &trans    &kp LALT
                         >;
                         sensor-bindings = <&inc_dec_kp UP DOWN>;
