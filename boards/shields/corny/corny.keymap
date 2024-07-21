@@ -125,9 +125,9 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-        &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                            &kp F6     &kp F7     &kp F8     &kp F9   &kp F10  &kp F11    &kp F12
-        &trans    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)                            AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
-        &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR  &kp RPAR   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
+        &trans    AS(LBKT)        AS(RBKT)       &kp LPAR  &kp RPAR  &mk_capt                                &trans     &trans     &trans   &trans   &trans     &trans 
+        &trans    AS(N1)          AS(N2)         AS(N3)    AS(N4)    AS(N5)                                  AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
+        &trans    &trans          &kp LBKT       &kp RBKT  &kp LPAR  &kp LA(LS(N0))   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
                                                 &trans &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -142,7 +142,7 @@
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-        &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &mk_capt                     &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
+        &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &trans                     &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
         &trans &trans   &trans &trans   &trans    &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))
         &trans &trans   &trans &trans   &trans    &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
                         &kp LGUI &trans   &kp SPACE                    &kp RET   &trans    &kp LALT
