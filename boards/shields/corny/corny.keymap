@@ -45,7 +45,7 @@
                 combo_rctrl {
                         timeout-ms = <50>;
                         key-positions = <21 22>;
-                        bindings = <&kp RALT>;
+                        bindings = <&kp RCTRL>;
                 };
                 
         };
