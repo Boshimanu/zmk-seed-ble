@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define COMBOMS 25
-
+#define HOLDTAP 175
 //Set The TAP Dance Mod Tap Timer - 200 Default
 // &mt {
 //         tapping-term-ms = <200>;
@@ -63,7 +63,7 @@
                         compatible = "zmk,behavior-hold-tap";
                         bindings = <&kp>, <&kp>;
                         #binding-cells = <2>;
-                        tapping-term-ms = <150>;
+                        tapping-term-ms = <HOLDTAP>;
                 };
         };
 
