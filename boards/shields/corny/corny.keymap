@@ -47,7 +47,12 @@
                         key-positions = <19 20 21>;
                         bindings = <&kp RCTRL>;
                 };
-
+                //Escape
+                combo_esc {
+                        timeout-ms = <50>;
+                        key-positions = <2 3>;
+                        binding = <&kp ESC>;
+                };
                 
         };
 
@@ -109,7 +114,7 @@
    AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
    &bs LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
    &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none  &kp C_MUTE AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                              &mo 3   &lt 1 RET   &kp LGUI                          &kp LALT   &lt 2 SPACE   &mo 4
+                              &mo 3   &lt 1 SPACE  &kp RET                          &kp RET   &lt 2 SPACE   &mo 4
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
