@@ -47,7 +47,7 @@
                         key-positions = <19 20 21>;
                         bindings = <&kp RCTRL>;
                 };
-                //Escape
+                //Escape - WF
                 combo_esc {
                         timeout-ms = <50>;
                         key-positions = <2 3>;
