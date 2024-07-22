@@ -28,7 +28,7 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                it_i: it_i {
+                it_i: it_i {//
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -61,13 +61,13 @@
                 it_a: it_a {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings
+                        bindings 
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
                                 <&kp SINGLE_QUOTE>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
-                };//
+                };
         };
 
         combos {
