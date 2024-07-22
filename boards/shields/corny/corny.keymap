@@ -86,7 +86,6 @@
                         bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
                 };   
         };
-
         // Test Layer Key TAP Dance
         // behaviors {
         //         lt1_lt3_ret: tap_dance_mod_tap {
@@ -130,7 +129,7 @@
         &trans    &trans          &kp LBKT       &kp RBKT  &kp LPAR  &kp LA(LS(N0))   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
                                                 &trans &trans &trans                        &trans  &trans  &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+                        sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
                 };
 
 //Layer 2________________________________________________________________________________________________________________________________________________
