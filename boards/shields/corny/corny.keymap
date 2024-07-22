@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define COMBOMS 25
-#define HOLDTAP 175
+#define HOLDTAP 165
 
 / {
         combos {
@@ -71,7 +71,7 @@
                         #binding-cells = <2>;
                         tapping-term-ms = <165>;
                         quick-tap-ms = <0>;
-                        require-prior-idle-ms = <130>;
+                        require-prior-idle-ms = <165>; //initial value 130
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
