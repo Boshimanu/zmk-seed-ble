@@ -6,67 +6,67 @@
 #define HOLDTAP 165
 
 / {
-//-------------Accents Italian-------------u
+//-------------Accents Italian-------------
         macros {
                 it_egrav: it_egrav {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LBKT>,
+                                <&kp LBKT>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LC(LA(LG(E)))>;
+                                <&kp LC(LA(LG(E)))>;
                 };
                 it_shift_egrav: it_shift_egrav {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LS(LBKT)>,
+                                <&kp LS(LBKT)>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LC(LA(LG(E)))>;
+                                <&kp LC(LA(LG(E)))>;
                 };
                 it_i: it_i {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp EQUAL>,
+                                <&kp EQUAL>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LC(LA(LG(E)))>;
+                                <&kp LC(LA(LG(E)))>;
                 };
                 it_o: it_o {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp SEMICOLON>,
+                                <&kp SEMICOLON>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LC(LA(LG(E)))>;
+                                <&kp LC(LA(LG(E)))>;
                 };
                 it_u: it_u {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp BACKSLASH>,
+                                <&kp BACKSLASH>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LC(LA(LG(E)))>;
+                                <&kp LC(LA(LG(E)))>;
                 };
                 it_a: it_a {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp SINGLE_QUOTE>,
+                                <&kp SINGLE_QUOTE>,
                                 <&macro_wait_time 50>,
-                                <&macro_press &kp LC(LA(LG(E)))>;
+                                <&kp LC(LA(LG(E)))>;
                 };
         };
 
