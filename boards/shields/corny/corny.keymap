@@ -6,6 +6,70 @@
 #define HOLDTAP 165
 
 / {
+//-------------Accents Italian-------------u
+        macros {
+                it_egrav: it_egrav {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                <&macro_wait_time 50>,
+                                <&macro_psess &kp LBKT>,
+                                <&macro_wait_time 50>,
+                                <&macro_press &kp LC(LA(LG(E)))>;
+                };
+                it_shift_egrav: it_shift_egrav {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                <&macro_wait_time 50>,
+                                <&macro_psess &kp LS(LBKT)>,
+                                <&macro_wait_time 50>,
+                                <&macro_press &kp LC(LA(LG(E)))>;
+                };
+                it_i: it_i {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                <&macro_wait_time 50>,
+                                <&macro_psess &kp EQUAL>,
+                                <&macro_wait_time 50>,
+                                <&macro_press &kp LC(LA(LG(E)))>;
+                };
+                it_o: it_o {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                <&macro_wait_time 50>,
+                                <&macro_psess &kp SEMICOLON>,
+                                <&macro_wait_time 50>,
+                                <&macro_press &kp LC(LA(LG(E)))>;
+                };
+                it_u: it_u {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                <&macro_wait_time 50>,
+                                <&macro_psess &kp BACKSLASH>,
+                                <&macro_wait_time 50>,
+                                <&macro_press &kp LC(LA(LG(E)))>;
+                };
+                it_a: it_a {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LC(LA(LG(I)))>,
+                                <&macro_wait_time 50>,
+                                <&macro_psess &kp SINGLE_QUOTE>,
+                                <&macro_wait_time 50>,
+                                <&macro_press &kp LC(LA(LG(E)))>;
+                };
+        };
+
         combos {
                 compatible = "zmk,combos";
                 //Left CMD - ST
@@ -63,6 +127,16 @@
                 };
         };
 
+        // IT_E
+        behaviors {
+                it_e: it_e {
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&it_shift_egrav>, <&it_egrav>;
+                        #binding-cells = <2>;
+                        tapping-term-ms = <HOLDTAP>;
+                };
+        };
+
         // Autoshift Hold Tap
         behaviors {
                 as: auto_shift {
@@ -86,59 +160,51 @@
                         bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
                 };   
         };
-        // Test Layer Key TAP Dance
-        // behaviors {
-        //         lt1_lt3_ret: tap_dance_mod_tap {
-        //                 compatible = "zmk,behavior-tap-dance";
-        //                 #binding-cells = <0>;
-        //                 tapping-term-ms = <200>; //old 165
-        //                 bindings = <&lt 1 RET>, <&mo 3>;
-        //         };   
-        // };
 
         keymap {
                 compatible = "zmk,keymap";
 
+//Layer 0 - Default
                 default_layer {
-// -------------------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |                    |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |                    |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |      |  |   MUTE   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |                    | ENT | RSE  | ALT |
-//Layer 0
-                        bindings = <
+        // -------------------------------------------------------------------------------------------------
+        // |  TAB      |  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U   |  I  |  O  |  P  |   \  |
+        // | Bakcspace |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J   |  K  |  L  |  ;  |   '  |
+        // | SHFT      |  Z  |  X  |  C  |  V  |  B  |  None|     |  MUTE   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+        //    4-WinMan+emojy  | 1-Numbers/Space | CMD/Enter |  | CMD/Enter | 2-Arrows  | 3-Italian Accents |
+        //                                              Vol+    Vol-
+                bindings = <
    AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
    &ht LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
    &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none  &kp C_MUTE AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                              &mo 3   &lt 1 SPACE  &ht LCMD RET                          &ht RCMD RET   &lt 2 SPACE   &mo 4
+                              &mo 4   &lt 1 SPACE  &ht LCMD RET                          &ht RCMD RET   &lt 2 SPACE   &mo 3
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
 //Layer 1 Numbers____________________________________________________________________________________________________________________________________
                 numbers_layer {
-// ------------------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
-// | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
-//                    | GUI |     | SPC |                    | ENT |     | ALT |
-//muta bootloader pe SYSTEM Layer
-                       bindings = <
-        &trans         AS(LBKT)        AS(RBKT)       &kp LPAR  &kp RPAR  &mk_capt                                &trans     &trans     &trans   &trans   &trans     &trans 
-        &trans         AS(N1)          AS(N2)         AS(N3)    AS(N4)    AS(N5)                                  AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
-        &bootloader    &trans          &kp LBKT       &kp RBKT  &kp LPAR  &kp LA(LS(O))   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
-                                                &trans &trans &trans                        &trans  &trans  &trans
+        // ------------------------------------------------------------------------------------------------
+        // |  TAB |  [  |  ]  |  (  |  )  |  ScrCapt  |                            |  6  |  7  |  8  |  9  |  0  | BKSP |
+        // | BTCLR| BT1 | BT2 | BT3 | BT4 |    BT5    |                            | LFT | DWN |  UP | RGT |     |  F12 |
+        // | SHFT | F1  | F2  | F3  | F4  |   F5      |  none |  |   bootloader    |  F6 | F7  | F8  | F9  | F10 |  F11 |
+        //                    | GUI |     | SPC |                    | ENT |     | ALT |
+        //muta bootloader pe SYSTEM Layer
+                        bindings = <
+        &trans       AS(LBKT)    AS(RBKT)    &kp LPAR   &kp RPAR  &mk_capt                               &trans     &trans     &trans   &trans   &trans     &trans 
+        &trans       AS(N1)      AS(N2)      AS(N3)     AS(N4)    AS(N5)                                 AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
+        &bootloader  &trans      &kp LBKT    &kp RBKT   &kp LPAR  &kp LA(LS(O))   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
+                                                &trans  &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
                 };
 
 //Layer 2________________________________________________________________________________________________________________________________________________
                 arrows_layer {
-// ------------------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |                    | ENT |     | ALT |
+        // ------------------------------------------------------------------------------------------------
+        // |  TAB |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  | BKSP |
+        // | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
+        // | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
+        //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
         &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &trans                     &trans       &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
@@ -149,15 +215,13 @@
                         sensor-bindings = <&inc_dec_kp UP DOWN>;
                 };
 
-//________________________________________________________________________________________________________________________________________________
-
 //Layer 3________________________________________________________________________________________________________________________________________________
                 bt_layer {
-// ------------------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
-// | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
-//                    | GUI |     | SPC |                    | ENT |     | ALT |
+        // ------------------------------------------------------------------------------------------------
+        // |  TAB |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  | BKSP |
+        // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
+        // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
+        //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
         &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                           &kp F7     &kp F8   &kp F9   &kp F10    &kp F11  &kp F12
@@ -167,6 +231,29 @@
                         >;
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
                 };
+
+//Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
+                it_layer {
+        // ------------------------------------------------------------------------------------------------
+        // |  TAB |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  | BKSP |
+        // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
+        // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
+        //                    | GUI |     | SPC |                    | ENT |     | ALT |
+
+                        bindings = <
+        &trans   &trans   &trans   &trans   &trans   &trans                        &trans   &trans   &trans   &it_u    &trans   &trans
+        &trans   &it_a    &trans   &trans   &trans   &trans                        &trans   &trans   &it_e    &it_i    &it_o    &trans
+        &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader    &trans   &trans   &trans   &trans   &trans   &trans
+                                        &trans   &trans   &trans                                 &trans   &trans   &trans
+                        >;
+                        sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+                };
+
+        // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
+        // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
+        // &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader      &trans   &trans   &trans   &trans   &trans   &trans
+        //                                 &trans   &trans   &trans                                 &trans   &trans   &trans
+
 
         };
 };
