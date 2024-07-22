@@ -67,7 +67,7 @@
                                 <&kp SINGLE_QUOTE>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
-                };
+                };//
         };
 
         combos {
@@ -241,7 +241,7 @@
         //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans   &trans                        &trans   &trans   &trans   &it_u    &trans   &trans
+        &trans   &trans   &trans   &trans   &trans   &trans                        &trans   &trans   &it_u    &trans   &trans   &trans
         &trans   &it_a    &trans   &trans   &trans   &trans                        &trans   &trans   &it_e    &it_i    &it_o    &trans
         &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader    &trans   &trans   &trans   &trans   &trans   &trans
                                         &trans   &trans   &trans                                 &trans   &trans   &trans
