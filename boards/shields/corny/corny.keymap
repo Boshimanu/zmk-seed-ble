@@ -14,7 +14,7 @@
                         bindings
                                 = <&macro_press &kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_psess &kp LBKT>,
+                                <&macro_press &kp LBKT>,
                                 <&macro_wait_time 50>,
                                 <&macro_press &kp LC(LA(LG(E)))>;
                 };
@@ -24,7 +24,7 @@
                         bindings
                                 = <&macro_press &kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_psess &kp LS(LBKT)>,
+                                <&macro_press &kp LS(LBKT)>,
                                 <&macro_wait_time 50>,
                                 <&macro_press &kp LC(LA(LG(E)))>;
                 };
@@ -34,7 +34,7 @@
                         bindings
                                 = <&macro_press &kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_psess &kp EQUAL>,
+                                <&macro_press &kp EQUAL>,
                                 <&macro_wait_time 50>,
                                 <&macro_press &kp LC(LA(LG(E)))>;
                 };
@@ -44,7 +44,7 @@
                         bindings
                                 = <&macro_press &kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_psess &kp SEMICOLON>,
+                                <&macro_press &kp SEMICOLON>,
                                 <&macro_wait_time 50>,
                                 <&macro_press &kp LC(LA(LG(E)))>;
                 };
@@ -54,7 +54,7 @@
                         bindings
                                 = <&macro_press &kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_psess &kp BACKSLASH>,
+                                <&macro_press &kp BACKSLASH>,
                                 <&macro_wait_time 50>,
                                 <&macro_press &kp LC(LA(LG(E)))>;
                 };
@@ -64,7 +64,7 @@
                         bindings
                                 = <&macro_press &kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&macro_psess &kp SINGLE_QUOTE>,
+                                <&macro_press &kp SINGLE_QUOTE>,
                                 <&macro_wait_time 50>,
                                 <&macro_press &kp LC(LA(LG(E)))>;
                 };
