@@ -123,10 +123,10 @@
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
 //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
-                        bindings = <
-        &trans    AS(LBKT)        AS(RBKT)       &kp LPAR  &kp RPAR  &mk_capt                                &trans     &trans     &trans   &trans   &trans     &trans 
-        &trans    AS(N1)          AS(N2)         AS(N3)    AS(N4)    AS(N5)                                  AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
-        &trans    &trans          &kp LBKT       &kp RBKT  &kp LPAR  &kp LA(LS(N0))   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
+                       bindings = <
+        &trans         AS(LBKT)        AS(RBKT)       &kp LPAR  &kp RPAR  &mk_capt                                &trans     &trans     &trans   &trans   &trans     &trans 
+        &trans         AS(N1)          AS(N2)         AS(N3)    AS(N4)    AS(N5)                                  AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
+        &bootloader    &trans          &kp LBKT       &kp RBKT  &kp LPAR  &kp LA(LS(N0))   &none    &bootloader   &kp PLUS   AS(MINUS)  &kp ESC  &kp DEL  AS(GRAVE)  &kp CAPS
                                                 &trans &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
