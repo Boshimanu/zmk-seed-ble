@@ -28,7 +28,7 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                it_i: it_i {//
+                it_ii: it_ii {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -38,13 +38,13 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                it_o: it_o {
+                it_oo: it_oo {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&kp SEMICOLON>,
+                                <&kp SEMI>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
@@ -54,7 +54,7 @@
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&kp BACKSLASH>,
+                                <&kp BSLH>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
@@ -242,7 +242,7 @@
 
                         bindings = <
         &trans   &trans   &trans   &trans   &trans   &trans                        &trans   &trans   &it_u    &trans   &trans   &trans
-        &trans   &it_a    &trans   &trans   &trans   &trans                        &trans   &trans   &it_e    &it_i    &it_o    &trans
+        &trans   &it_a    &trans   &trans   &trans   &trans                        &trans   &trans   &it_e    &it_ii   &it_oo   &trans
         &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader    &trans   &trans   &trans   &trans   &trans   &trans
                                         &trans   &trans   &trans                                 &trans   &trans   &trans
                         >;
