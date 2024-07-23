@@ -15,7 +15,7 @@
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
                                 <&kp LBKT>,
-                        <&macro_wait_time 50>
+                                <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_shift_egrav: it_shift_egrav {
