@@ -55,7 +55,8 @@
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
                                 <&kp BSLH>,
-                                <&macro_wait_time 50>,//òòòòòòòòùùùùùùììììì^ììììììììììèèèèùùùè
+                                <&macro_wait_time 50>,
+                                <&kp LC(LA(LG(E)))>;
                 };
                 it_a: it_a {
                         compatible = "zmk,behavior-macro";
