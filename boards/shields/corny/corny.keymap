@@ -28,7 +28,7 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                iti: iti {
+                it_i: it_i {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -38,7 +38,7 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                ito: ito {
+                it_o: it_o {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
@@ -234,16 +234,11 @@
 
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
-        // ------------------------------------------------------------------------------------------------
-        // |  TAB |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  | BKSP |
-        // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
-        // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
-        //                    | GUI |     | SPC |                    | ENT |     | ALT |
         bindings = <
-        AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
-        &ht LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
-        &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none  &kp C_MUTE AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                                          &trans  &trans &trans                        &trans  &trans  &trans
+        &none   &none   &none   &none   &none   &none                          &none   &none   &it_u   &none   &none   &none
+        &none   &it_a   &none   &none   &none   &none                          &none   &none   &it_e   &it_i   &it_o   &none
+        &none   &none   &none   &none   &none   &none        &none &none       &none   &none   &none   &none   &none   &none
+                                      &none   &none   &none               &none   &none   &none
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
