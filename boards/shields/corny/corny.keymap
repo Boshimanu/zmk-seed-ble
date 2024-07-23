@@ -44,7 +44,7 @@
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 100>,
-                                <&kp SEMI>,
+                                <&kp BSLH>, //ù
                                 <&macro_wait_time 100>,
                                 <&kp LC(LA(LG(E)))>;
                 };
