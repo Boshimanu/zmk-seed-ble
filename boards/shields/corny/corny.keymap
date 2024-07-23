@@ -33,9 +33,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time 100>,
                                 <&kp EQUAL>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time 100>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_o: it_o {
@@ -43,9 +43,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time 100>,
                                 <&kp SEMI>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time 100>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_u: it_u {
@@ -55,8 +55,7 @@
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
                                 <&kp BSLH>,
-                                <&macro_wait_time 50>,
-                                <&kp LC(LA(LG(E)))>;
+                                <&macro_wait_time 50>,//òòòòòòòòùùùùùùììììì^ììììììììììèèèèùùùè
                 };
                 it_a: it_a {
                         compatible = "zmk,behavior-macro";
@@ -64,7 +63,7 @@
                         bindings 
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 50>,
-                                <&kp SINGLE_QUOTE>,
+                                <&kp SQT>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
