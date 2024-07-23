@@ -131,9 +131,9 @@
         behaviors {
                 it_e: it_e {
                         compatible = "zmk,behavior-hold-tap";
-                        bindings = <&it_shift_egrav>, <&it_egrav>;
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>;
+                        bindings = <&it_shift_egrav>, <&it_egrav>;
                 };
         };
 
@@ -236,7 +236,7 @@
                 it_layer {
         bindings = <
         &none   &none   &none   &none   &none   &none                          &none   &none   &it_u       &none   &none   &none
-        &none   &it_a   &none   &none   &none   &none                          &none   &none   &it_egrav   &it_i   &it_o   &none
+        &none   &it_a   &none   &none   &none   &none                          &none   &none   &it_e       &it_i   &it_o   &none
         &none   &none   &none   &none   &none   &none        &none &none       &none   &none   &none       &none   &none   &none
                                       &none   &none   &none               &none   &none   &none
                                 >;
@@ -247,7 +247,7 @@
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
         // &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader      &trans   &trans   &trans   &trans   &trans   &trans
         //                                 &trans   &trans   &trans                                 &trans   &trans   &trans   
-
+//
 
         };
 };
