@@ -241,9 +241,9 @@
         //                    | GUI |     | SPC |                    | ENT |     | ALT |
 
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans   &trans                        &trans   &trans   &it_u    &trans   &trans   &trans
-        &trans   &it_a    &trans   &trans   &trans   &trans                        &trans   &trans   &it_e    &iti     &ito     &trans
-        &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader    &trans   &trans   &trans   &iti     &ito     &trans
+        &trans   &trans   &trans   &trans   &trans   &trans                        &trans   &trans   &it_u    &trans   &trans   &kp Z
+        &trans   &it_a    &trans   &trans   &trans   &trans                        &trans   &trans   &it_e    &iti     &ito     &kp X
+        &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader    &kp A    &kp B    &kp C    &iti     &ito     &kp Y
                                         &trans   &trans   &trans                                 &trans   &trans   &trans
                         >;
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
