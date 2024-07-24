@@ -44,7 +44,7 @@
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time 100>,
-                                <&kp SEMI>, //ùùù
+                                <&kp SEMI>, 
                                 <&macro_wait_time 100>,
                                 <&kp LC(LA(LG(E)))>;
                 };
@@ -125,20 +125,14 @@
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>;
                 };
-        };
-
-        // IT_E
-        behaviors {
+        // IT_E Hold Tap
                 it_e: it_e {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>;
                         bindings = <&it_shift_egrav>, <&it_egrav>;
                 };
-        };
-
         // Autoshift Hold Tap
-        behaviors {
                 as: auto_shift {
                         compatible = "zmk,behavior-hold-tap";
                         label = "ZM_autoshift";
@@ -149,10 +143,7 @@
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
-        };            
-
         // Capture Screen Key TAP Dance
-        behaviors {
                 mk_capt: tap_dance_mod_tap {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
