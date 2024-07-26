@@ -162,7 +162,7 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>; //old 165
                         bindings = <&lt 2 SPACE>, <&mo 4>;
-                }
+                };
         };
 
         keymap {
