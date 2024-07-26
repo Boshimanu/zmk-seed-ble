@@ -4,18 +4,20 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define COMBOMS 25
 #define HOLDTAP 165
+#define MACRO_WAIT_TIME 50
 
 / {
 //-------------Accents Italian-------------
+        //MACROS
         macros {
                 it_egrav: it_egrav {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LBKT>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_shift_egrav: it_shift_egrav {
@@ -23,9 +25,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LS(LBKT)>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_i: it_i {
@@ -33,9 +35,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 100>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp EQUAL>,
-                                <&macro_wait_time 100>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_o: it_o {
@@ -43,9 +45,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 100>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp SEMI>, 
-                                <&macro_wait_time 100>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_u: it_u {
@@ -53,9 +55,9 @@
                         #binding-cells = <0>;
                         bindings
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp BSLH>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 it_a: it_a {
@@ -69,7 +71,7 @@
                                 <&kp LC(LA(LG(E)))>;
                 };
         };
-
+        //COMBOS
         combos {
                 compatible = "zmk,combos";
                 //Left CMD - ST
@@ -117,20 +119,24 @@
                 
         };
 
-        // BackSpace HOLD Tap
+        //BEHAIVORS
         behaviors {
+                // BackSpace HOLD Tap
                 ht: ht {
                         compatible = "zmk,behavior-hold-tap";
                         bindings = <&kp>, <&kp>;
                         #binding-cells = <2>;
-                        tapping-term-ms = <HOLDTAP>;
+                        tapping-term-ms = <HOLDTAP>;    
+                        quick-tap-ms = <0>;
+                        require-prior-idle-ms = <165>; //initial value 130
+                        flavor = "balanced";
                 };
         // IT_E Hold Tap
                 it_e: it_e {
                         compatible = "zmk,behavior-hold-tap";
+                        bindings = <&it_shift_egrav>, <&it_egrav>;
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>;
-                        bindings = <&it_shift_egrav>, <&it_egrav>;
                 };
         // Autoshift Hold Tap
                 as: auto_shift {
@@ -226,9 +232,9 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
         bindings = <
-        &none   &none   &none   &none   &none   &none                          &none   &none   &it_u       &none   &none   &none
-        &none   &it_a   &none   &none   &none   &none                          &none   &none   &it_e       &it_i   &it_o   &none
-        &none   &none   &none   &none   &none   &none        &none &none       &none   &none   &none       &none   &none   &none
+        &none   &none   &none   &none   &none   &none                          &none   &none   &it_u    &none   &none   &none
+        &none   &it_a   &it_i   &it_o   &none   &none                          &none   &none   &it_e    &it_i   &it_o   &none
+        &none   &none   &none   &none   &none   &none        &none &none       &none   &none   &none    &none   &none   &none
                                       &none   &none   &none               &none   &none   &none
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -238,7 +244,7 @@
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
         // &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader      &trans   &trans   &trans   &trans   &trans   &trans
         //                                 &trans   &trans   &trans                                 &trans   &trans   &trans   
-//
+//  
 
         };
 };
