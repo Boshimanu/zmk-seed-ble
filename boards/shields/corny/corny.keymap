@@ -160,7 +160,7 @@
                 tap_layer4:tap_layer4 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>; //old 165
+                        tapping-term-ms = <HOLDTAP>; //old 165
                         bindings = <&lt 2 SPACE>, <&mo 4>;
                 };
         };
