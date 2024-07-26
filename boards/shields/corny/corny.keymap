@@ -232,9 +232,9 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
         bindings = <
-        &none   &none   &none   &none   &none   &none                          &none   &none   &it_u    &none   &none   &none
-        &none   &it_a   &it_i   &it_o   &none   &none                          &none   &none   &it_e    &it_i   &it_o   &none
-        &none   &none   &none   &none   &none   &none        &none &none       &none   &none   &none    &none   &none   &none
+        &none   &none   &none   &none   &none   &none                          &none   &none             &it_u       &none   &none   &none
+        &none   &it_a   &none   &none   &none   &none                          &none   &it_shift_egrav   &it_egrav   &it_i   &it_o   &none
+        &none   &none   &none   &none   &none   &none        &none &none       &none   &none             &none       &none   &none   &none
                                       &none   &none   &none               &none   &none   &none
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
