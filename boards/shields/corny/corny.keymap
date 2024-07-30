@@ -128,7 +128,7 @@
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>;    
                         quick-tap-ms = <0>;
-                        require-prior-idle-ms = <165>; //initial value 130
+                        require-prior-idle-ms = <140>; //initial value 165
                         flavor = "balanced";
                 };
         // IT_E Hold Tap
@@ -143,9 +143,9 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "ZM_autoshift";
                         #binding-cells = <2>;
-                        tapping-term-ms = <165>;
+                        tapping-term-ms = <140>; //prev was 165
                         quick-tap-ms = <0>;
-                        require-prior-idle-ms = <165>; //initial value 130
+                        require-prior-idle-ms = <140>; //initial value 165
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
@@ -153,14 +153,14 @@
                 mk_capt: tap_dance_mod_tap {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>; //old 165
+                        tapping-term-ms = <165>; //old 200
                         bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
                 };
 
                 tap_layer4:tap_layer4 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <HOLDTAP>; //old 165
+                        tapping-term-ms = <HOLDTAP>;
                         bindings = <&ht RCMD RET>, <&mo 4>;
                 };
         };
