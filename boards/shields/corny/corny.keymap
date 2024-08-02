@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define COMBOMS 25
-#define HOLDTAP 150 // Old Value 150
+#define HOLDTAP 165 // Old Value 150
 #define MACRO_WAIT_TIME 50
 
 / {
