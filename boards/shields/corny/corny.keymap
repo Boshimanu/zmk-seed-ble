@@ -144,8 +144,8 @@
                         label = "ZM_autoshift";
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>; //prev was 140
-                        quick-tap-ms = <50>; // was 0
-                        require-prior-idle-ms = <50>; //initial value HOLDTAP=150
+                        quick-tap-ms = <50>; // 50 I think is the sweet Spot for this settings
+                        require-prior-idle-ms = <50>; // 50 I think this is the sweet spot for this settings
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
@@ -194,7 +194,7 @@
         &trans       &trans      &kp LBKT    &kp RBKT   &kp LPAR  &kp LA(LS(O))   &none    &bootloader   &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
                                                 &trans  &trans &trans                        &trans  &trans  &trans
                         >;
-                        sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
                 };
 
 //Layer 2________________________________________________________________________________________________________________________________________________
