@@ -145,7 +145,7 @@
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>; //prev was 140
                         quick-tap-ms = <50>; // was 0
-                        //require-prior-idle-ms = <HOLDTAP>; //initial value HOLDTAP=150
+                        require-prior-idle-ms = <50>; //initial value HOLDTAP=150
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
