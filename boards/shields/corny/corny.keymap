@@ -144,8 +144,8 @@
                         label = "ZM_autoshift";
                         #binding-cells = <2>;
                         tapping-term-ms = <HOLDTAP>; //prev was 140
-                        quick-tap-ms = <HOLDTAP>; // was 0
-                        require-prior-idle-ms = <HOLDTAP>; //initial value HOLDTAP=150
+                        quick-tap-ms = <165>; // was 0
+                        require-prior-idle-ms = <165>; //initial value HOLDTAP=150
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
