@@ -118,7 +118,7 @@
                 };
                 //Combo - Del
                 combo_del {
-                        timeout-md = <COMBOMS>;
+                        timeout-ms= <COMBOMS>;
                         key-positions = <3 4>; 
                         bindings = <&kp DEL>;
                 };
