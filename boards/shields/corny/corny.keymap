@@ -121,7 +121,7 @@
                         timeout-md = <COMBOMS>;
                         key-positions = <3 4>; 
                         bindings = <&kp DEL>;
-                }
+                };
         };
 
         //BEHAIVORS
