@@ -5,7 +5,7 @@
 #define BCK &bck_ht LA(BACKSPACE) BACKSPACE     // BackSpace
 #define IT_EGRAV &it_egrav                      // IT E Grav
 #define IT_SHIFT_EGRAV &it_shift_egrav          // IT Shifted Grav
-#define IT_E &it_e
+#define IT_E &it_e 0
 #define COMBOMS 25
 #define HOLDTAP 165 // Old Value 150
 #define MACRO_WAIT_TIME 25
