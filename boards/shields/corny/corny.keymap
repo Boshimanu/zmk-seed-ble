@@ -121,13 +121,13 @@
                 };
                 //Right MEH - NEI - 19 20 21
                 combo_rmeh {
-                        timeout-ms = <COMBOS>;
+                        timeout-ms = <COMBOMS>;
                         key-positions = <19 20 21>;
                         bindings = <&kp LC(LA(LEFT_SHIFT))>;
                 }; 
                 //Left Hyper - ARST - 13 14 15 16
                 combo_lhyp {
-                        timeout-ms = <COMBOS>;
+                        timeout-ms = <COMBOMS>;
                         key-positions = <13 15 15 16>;
                         bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>;
                 };
