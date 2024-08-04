@@ -58,21 +58,10 @@
         // Default Layer Configuration
         default_layer {
             bindings = <
-                &kp Q            // Regular key for Q
-                &hold_tap_macro  // Custom behavior for tap and hold
-                &macro_3         // Triggers macro_3
-                &kp A
-                &kp S
-                &kp D
-
-
-                                                                               &none   &none   &none   &none   &none   &none
-        &none   &none   &none   &none   &none   &none                          &none   &none   &none   &none   &none   &none
-        &none   &none   &none   &none   &none   &none        &none &none       &none   &none   &none   &none   &none   &none
-                                        &none   &none   &none               &none   &none   &none
-
-
-                // Add more key definitions here as needed
+        &kp Q   &hold_tap_macro  &macro_3  &kp A   &kp S   &kp D                           &none   &none   &none   &none   &none   &none
+        &none   &none            &none     &none   &none   &none                           &none   &none   &none   &none   &none   &none
+        &none   &none            &none     &none   &none   &none        &none   &none      &none   &none   &none   &none   &none   &none
+                                        &none   &none   &none                                   &none   &none   &none
             >;
              sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
