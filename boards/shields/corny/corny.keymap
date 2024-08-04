@@ -271,7 +271,7 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &hold_tap_macro 0  &it_u              &trans     &trans    &trans
+        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &hold_tap_macro -1 &it_u              &trans     &trans    &trans
         &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &it_shift_egrav    &it_egrav          &it_i      &it_o     &trans
         &trans   &trans   &trans   &trans   &trans      &trans     &none    &trans     &trans   &trans             &trans             &trans     &trans    &trans
                                         &trans   &trans   &trans                                        &trans   &trans   &trans
@@ -288,4 +288,4 @@
         //                                 &trans   &trans   &trans                                 &trans   &trans   &trans   
 
 
-// 
+// worldhlloHsttdddééèèèéèìèòoOìèéééééddDdddtrarsaaarraaaaaaaaaaaRàààààààààdddéèèéèèèééèèèòòòoooòììììììììòòìì
