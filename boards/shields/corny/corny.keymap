@@ -273,19 +273,19 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
         bindings = <
-        &trans   &trans   &trans   &trans   &trans   &trans                         &trans   &trans            &it_u              &trans     &trans    &trans
-        &trans   &it_a    &trans   &trans   &mt macro_1 macro_2   &trans                         &trans   &it_shift_egrav   &hold_tap_macro    &macro_3   &it_o     &trans
-        &trans   &trans   &trans   &trans   &trans   &trans        &trans &trans    &trans   &trans            &trans             &trans     &trans    &trans
-                                        &trans   &trans   &trans               &trans   &trans   &trans
+        &trans   &trans   &trans   &hold_tap_macro    &macro_3     &trans                         &trans   &trans            &it_u              &trans     &trans    &trans
+        &trans   &it_a    &trans   &trans             &trans       &trans                         &trans   &it_shift_egrav   &hold_tap_macro    &macro_3   &it_o     &trans
+        &trans   &trans   &trans   &hold_tap_macro    &mt N1 N2N   &trans   &trans        &trans  &trans    &trans   &trans  &trans             &trans     &trans    &trans
+                                        &trans   &trans   &trans                                        &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
+
+        };
+};
+
 
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
         // &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader      &trans   &trans   &trans   &trans   &trans   &trans
         //                                 &trans   &trans   &trans                                 &trans   &trans   &trans   
-//  
-
-        };
-};
