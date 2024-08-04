@@ -161,13 +161,11 @@
                 };
         };
 
-
-
         behaviors {
         // BackSpace HOLD Tap
-                ht: ht {
+                bck_ht: bck_ht {
                         compatible = "zmk,behavior-hold-tap";
-                        bindings = <&kp>, <&kp>;
+                        bindings = <&kp LA(BACKSPACE)>, <&kp BACKSPACE>;
                         #binding-cells = <2>;
                         tapping-term-ms = <145>;    
                         quick-tap-ms = <0>;
@@ -222,9 +220,10 @@
         // | SHFT      |  Z  |  X  |  C  |  V  |  B  |  None|     |  MUTE   |  N  |  M   |  ,  |  .  |  /  | SHFT |
         //    4-WinMan+emojy  | 1-Numbers/Space | CMD/Enter |  | CMD/Enter | 2-Arrows  | 3-Italian Accents |
         //                                              Vol+    Vol-
+        //LA(BACKSPACE) BACKSPACE AS(A)
                 bindings = <
         AS(TAB)                     AS(Q) AS(W) AS(F) AS(P) AS(G)                   AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
-        &ht LA(BACKSPACE) BACKSPACE AS(A) AS(R) AS(S) AS(T) AS(D)                   AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
+        &bck_ht                     AS(R) AS(S) AS(T) AS(D)                         AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
         &kp LSHFT                   AS(Z) AS(X) AS(C) AS(V) AS(B) &none  &kp C_MUTE AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
                                 &mo 3   &lt 1 SPACE  &ht LCMD RET                          &tap_layer4   &lt 2 SPACE   &kp SPACE
                         >;
@@ -271,8 +270,8 @@
                 it_layer {
                         bindings = <
         &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &trans            &it_u             &trans     &trans    &trans
-        &trans   &it_a  &trans   &trans   &trans      &trans                         &trans   &trans            &it_e 0           &trans     &it_i     &it_o
-        &trans   &trans   &trans   &trans   &it_egrav   &it_egrav    &none  &trans     &trans   &trans            &trans            &trans     &trans    &trans
+        &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &trans            &it_e 0           &trans     &it_i     &it_o
+        &trans   &trans   &trans   &trans   &itrans     &trans    &none  &trans        &trans   &trans            &trans            &trans     &trans    &trans
                                         &trans   &trans   &trans                                        &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
