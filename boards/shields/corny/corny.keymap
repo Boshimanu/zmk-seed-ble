@@ -274,10 +274,10 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
         bindings = <
-        &none   &none   &none   &none   &none   &none                          &none   &none             &it_u              &none      &none   &none
-        &none   &it_a   &none   &none   &none   &none                          &none   &it_shift_egrav   &hold_tap_macro    &macro_3   &it_o   &none
-        &none   &none   &none   &none   &none   &none        &none &none       &none   &none             &none              &none      &none   &none
-                                        &none   &none   &none               &none   &none   &none
+        &trans   &trans   &trans   &trans   &trans   &trans                         &trans   &trans            &it_u              &trans     &trans    &trans
+        &trans   &it_a    &trans   &trans   &trans   &trans                         &trans   &it_shift_egrav   &hold_tap_macro    &macro_3   &it_o     &trans
+        &trans   &trans   &trans   &trans   &trans   &trans        &trans &trans    &trans   &trans            &trans             &trans     &trans    &trans
+                                        &trans   &trans   &trans               &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
