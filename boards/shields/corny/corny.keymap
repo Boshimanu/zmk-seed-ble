@@ -168,8 +168,18 @@
                         bindings = <&kp LA(BACKSPACE)>, <&kp BACKSPACE>;
                         #binding-cells = <2>;
                         tapping-term-ms = <145>;    
-                        quick-tap-ms = <0>;
+                        quic-tap-ms = <0>;
                         require-prior-idle-ms = <140>; //initial value 140
+                        flavor = "balanced";
+                };
+        // Hold Tap General
+                ht: ht {
+                        compatible = "zmk,behavior-hold-tap";
+                        bindings = <&kp>, <&kp>;
+                        #binding-cells = <2>;
+                        tapping-term-ms = <HOLDTAP>;    
+                        quick-tap-ms = <50>;
+                        require-prior-idle-ms = <50>; //initial value 140
                         flavor = "balanced";
                 };
         // IT_E Hold Tap
