@@ -7,9 +7,6 @@
 #define MACRO_WAIT_TIME 50
 
 
-
-
-
 / {
         //-------------Accents Italian-------------
         //MACROS
@@ -157,7 +154,7 @@
 
         //BEHAIVORS TEMP
         behaviors {
-                // Define Hold-Tap Behavior
+                 // Define Hold-Tap Behavior
                 hold_tap_macro: hold_tap_macro {
                         compatible = "zmk,behavior-hold-tap";
                         label = "Hold Tap Macro";
@@ -166,8 +163,10 @@
                         tapping-term-ms = <200>;           // Tap/hold detection threshold
                         quick-tap-ms = <150>;              // Quick tap detection threshold
                 };
+        };
 
 
+        behaviors {
                 // BackSpace HOLD Tap
                 ht: ht {
                         compatible = "zmk,behavior-hold-tap";
