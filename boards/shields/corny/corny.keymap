@@ -123,7 +123,7 @@
                 combo_rmeh {
                         timeout-ms = <COMBOMS>;
                         key-positions = <19 20 21>;
-                        bindings = <&kp LC(LA(LEFT_SHIFT))>;
+                        bindings = <&kp RC(RA(RIGHT_SHIFT))>;
                 }; 
                 //Left Hyper - ARST - 13 14 15 16
                 combo_lhyp {
@@ -135,7 +135,7 @@
                 combo_rhyp {
                         timeout-ms = <COMBOMS>;
                         key-positions = <19 20 21 22>;
-                        bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>;
+                        bindings = <&kp RC(RA(RG(RIGHT_SHIFT)))>;
                 };
                 //Escape - WF
                 combo_esc {
