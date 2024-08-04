@@ -15,17 +15,12 @@ As Dori Sa ImpartasecS
 Hello Say hello to My little Friend mac2016! 
 Questo Pdo pero questo periodo del anno! 
 Hello to
- éùééèéééééèèèèèèèèé
-
- èééééèééééèèèèèééééééééèéééééééééééèèèèèèééééèééééèùàèééèèéèéèéééèèèèé
-
- worldéééééééééworldworldworldhlloworldhllohlloworldhlloRST
 
 
 
-kM<>//àRstD QWqq    qwfpGjlùy;|\héworldiiioo"'
 
-éhelloIhelloiiiùiioooo''''ooOo
+
+
 
 
 #include <dt-bindings/zmk/keys.h>

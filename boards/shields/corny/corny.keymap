@@ -1,8 +1,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macrod
-#define BCK &bck_ht LA(BACKSPACE) BACKSPACE
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift 
+#define BCK &bck_ht LA(BACKSPACE) BACKSPACE     // BackSpace
+#define IT_EGRAV &it_egrav                      // IT E Grav
+#define IT_SHIFT_EGRAV &it_shift_egrav          // IT Shifted Grav
 #define COMBOMS 25
 #define HOLDTAP 165 // Old Value 150
 #define MACRO_WAIT_TIME 25
@@ -280,9 +282,9 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &trans            &it_u             &trans     &trans    &trans
-        &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &trans            &it_e 0           &trans     &it_i     &it_o
-        &trans   &trans   &trans   &trans   &trans      &trans    &none  &trans        &trans   &trans            &trans            &trans     &trans    &trans
+        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &trans            &it_u                          &trans    &trans    &trans
+        &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &trans            &ht IT_SHIFT_EGRAV  IT_EGRAV   &trans    &it_i     &it_o
+        &trans   &trans   &trans   &trans   &trans      &trans    &none  &trans        &trans   &trans            &trans                         &trans    &trans    &trans
                                         &trans   &trans   &trans                                        &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
