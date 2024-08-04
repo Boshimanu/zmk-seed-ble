@@ -165,7 +165,7 @@
         // BackSpace HOLD Tap
                 bck_ht: bck_ht {
                         compatible = "zmk,behavior-hold-tap";
-                        bindings = <&kp LA(BACKSPACE)>, <&kp BACKSPACE>;
+                        bindings = <LA(BACKSPACE)>, <BACKSPACE>;
                         #binding-cells = <2>;
                         tapping-term-ms = <145>;    
                         quic-tap-ms = <0>;
