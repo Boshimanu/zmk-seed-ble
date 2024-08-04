@@ -3,8 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift 
 #define BCK &bck_ht LA(BACKSPACE) BACKSPACE     // BackSpace
-#define IT_EGRAV &it_egrav                      // IT E Grav
-#define IT_SHIFT_EGRAV &it_shift_egrav          // IT Shifted Grav
 #define IT_E &it_e 0
 #define COMBOMS 25
 #define HOLDTAP 165 // Old Value 150
@@ -18,24 +16,6 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                        //with macro_press
-                                //       = <&macro_press &kp   LC(LA(LEFT_GUI))>,       //switch to Italian
-                                //         <&macro_wait_time MACRO_WAIT_TIME>,
-                                //         <&macro_tap &kp I>,
-                                //         <&macro_wait_time MACRO_WAIT_TIME>,
-                                //         <&macro_release &kp LC(LA(LEFT_GUI))>,
-
-                                //         <&macro_wait_time MACRO_WAIT_TIME>,
-                                //         <&macro_tap &kp LBKT>,                      //press e_accent
-                                //         <&macro_wait_time MACRO_WAIT_TIME>,
-
-                                //         <&macro_press &kp LC(LA(LEFT_GUI))>,        //switch to english
-                                //         <&macro_wait_time MACRO_WAIT_TIME>,
-                                //         <&macro_tap &kp E>,
-                                //         <&macro_wait_time MACRO_WAIT_TIME>,
-                                //         <&macro_release &kp LC(LA(LEFT_GUI))>,
-                                //         <&macro_wait_time MACRO_WAIT_TIME>;
-
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LBKT>,
@@ -46,24 +26,6 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                 //with macro_press
-                                        //  = <&macro_press &kp   LC(LA(LEFT_GUI))>,       //switch to Italian
-                                        // <&macro_wait_time MACRO_WAIT_TIME>,
-                                        // <&macro_tap &kp I>,
-                                        // <&macro_wait_time MACRO_WAIT_TIME>,
-                                        // <&macro_release &kp LC(LA(LEFT_GUI))>,
-
-                                        // <&macro_wait_time MACRO_WAIT_TIME>,
-                                        // <&macro_tap &kp LS(LBKT)>,                      //press e_accent
-                                        // <&macro_wait_time MACRO_WAIT_TIME>,
-
-                                        // <&macro_press &kp LC(LA(LEFT_GUI))>,        //switch to english
-                                        // <&macro_wait_time MACRO_WAIT_TIME>,
-                                        // <&macro_tap &kp E>,
-                                        // <&macro_wait_time MACRO_WAIT_TIME>,
-                                        // <&macro_release &kp LC(LA(LEFT_GUI))>,
-                                        // <&macro_wait_time MACRO_WAIT_TIME>;
-
                                 = <&kp LC(LA(LG(I)))>,
                                 <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LS(LBKT)>,
@@ -154,10 +116,10 @@
                 //Escape - WF
                 combo_esc {
                         timeout-ms = <COMBOMS>;
-                        key-positions = <25 3>;
+                        key-positions = <2 3>;
                         bindings = <&kp ESC>;
                 };
-                //Combo - Del
+                //DEL - FP
                 combo_del {
                         timeout-ms= <50>;
                         key-positions = <3 4>; 
@@ -236,9 +198,9 @@
         //                                              Vol+    Vol-
         //LA(BACKSPACE) BACKSPACE AS(A)
                 bindings = <
-        AS(TAB)                           AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
-        BCK                               AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
-        &kp LSHFT                         AS(Z) AS(X) AS(C) AS(V) AS(B)     &none  &kp C_MUTE       AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
+        AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
+        BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
+        &kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)     &none  &kp C_MUTE       AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
                                 &mo 3   &lt 1 SPACE  &ht LCMD RET                          &tap_layer4   &lt 2 SPACE   &kp SPACE
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
