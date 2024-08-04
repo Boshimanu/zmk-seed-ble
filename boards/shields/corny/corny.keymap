@@ -134,7 +134,7 @@
                 //Rihgt Hyper - NEIO - 19 20 21 22
                 combo_rhyp {
                         timeout-ms = <COMBOMS>;
-                        key-positions = <19 20 21 22>
+                        key-positions = <19 20 21 22>;
                         bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>;
                 };
                 //Escape - WF
