@@ -269,9 +269,9 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &trans            &it_u 0           &trans     &trans    &trans
-        &trans   &it_a 0  &trans   &trans   &trans      &trans                         &trans   &trans            &it_e 0           &trans     &it_i 0   &it_o 0
-        &trans   &trans   &trans   &trans   &it_egrav 0 &it_egrav 0  &none  &trans     &trans   &trans            &trans            &trans     &trans    &trans
+        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &trans            &it_u             &trans     &trans    &trans
+        &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &trans            &it_e 0           &trans     &it_i     &it_o
+        &trans   &trans   &trans   &trans   &it_egrav   &it_egrav    &none  &trans     &trans   &trans            &trans            &trans     &trans    &trans
                                         &trans   &trans   &trans                                        &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
