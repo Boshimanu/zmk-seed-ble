@@ -160,7 +160,7 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "Hold Tap Macro";
                         #binding-cells = <2>;  // Two bindings: tap and hold actions
-                        bindings = <&macro_1>, <&macro_2>; // Tap = macro_1, Hold = macro_2
+                        bindings = <&macro_1 0>, <&macro_2 0>; // Tap = macro_1, Hold = macro_2
                         tapping-term-ms = <200>;           // Tap/hold detection threshold
                         quick-tap-ms = <150>;              // Quick tap detection threshold
                 };
@@ -271,7 +271,7 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &hold_tap_macro -1 &it_u              &trans     &trans    &trans
+        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &hold_tap_macro    &it_u              &trans     &trans    &trans
         &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &it_shift_egrav    &it_egrav          &it_i      &it_o     &trans
         &trans   &trans   &trans   &trans   &trans      &trans     &none    &trans     &trans   &trans             &trans             &trans     &trans    &trans
                                         &trans   &trans   &trans                                        &trans   &trans   &trans
