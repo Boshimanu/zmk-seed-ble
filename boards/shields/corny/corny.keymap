@@ -159,7 +159,7 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "Hold Tap Macro";
                         #binding-cells = <2>;  // Two bindings: tap and hold actions
-                        bindings = <&kp N1>, <&kp N2>; // Tap = macro_1, Hold = macro_2
+                        bindings = <N1>, <N2>; // Tap = macro_1, Hold = macro_2
                         tapping-term-ms = <200>;           // Tap/hold detection threshold
                         quick-tap-ms = <150>;              // Quick tap detection threshold
                 };
