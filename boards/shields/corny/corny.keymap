@@ -3,8 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode             // Autoshift 
 #define BCK &bck_ht LA(BACKSPACE) BACKSPACE             // BackSpace
-#define MEH &kp LC(LA(LS))                              // &meh key
-#define HYP &kp LC(LA(LG(LS)))                          // &Hyper key
 #define IT_E &it_e 0
 #define COMBOMS 30
 #define HOLDTAP 165 // Old Value 150
@@ -119,25 +117,25 @@
                 combo_lmeh {
                         timeout-ms = <COMBOMS>;
                         key-positions = <13 14 15>;
-                        bindings = <MEH>;
+                        bindings = <&kp LC(LA(LS))>;
                 };
                 //Right MEH - NEI - 19 20 21
                 combo_rmeh {
                         timeout-ms = <COMBOS>;
                         key-positions = <19 20 21>;
-                        bindings = <MEH>;
+                        bindings = <&kp LC(LA(LS))>;
                 }; 
                 //Left Hyper - ARST - 13 14 15 16
                 combo_lhyp {
                         timeout-ms = <COMBOS>;
                         key-positions = <13 15 15 16>;
-                        bindings = <HYP>;
+                        bindings = <&kp LC(LA(LG(LS)))>;
                 };
                 //Rihgt Hyper - NEIO - 19 20 21 22
                 combo_rhyp {
                         timeout-ms = <COMBOMS>;
                         key-positions = <19 20 21 22>
-                        bindings = <HYP>;
+                        bindings = <&kp LC(LA(LG(LS)))>;
                 };
                 //Escape - WF
                 combo_esc {
