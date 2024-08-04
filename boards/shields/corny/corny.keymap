@@ -275,7 +275,7 @@
         bindings = <
         &trans   &trans   &trans   &hold_tap_macro    &macro_3     &trans                         &trans   &trans            &it_u              &trans     &trans    &trans
         &trans   &it_a    &trans   &trans             &trans       &trans                         &trans   &it_shift_egrav   &hold_tap_macro    &macro_3   &it_o     &trans
-        &trans   &trans   &trans   &hold_tap_macro    &mt N1 N2    &trans   &trans        &trans  &trans    &trans   &trans  &trans             &trans     &trans    &trans
+        &trans   &trans   &trans   &hold_tap_macro    &mt A B      &trans   &trans        &trans  &trans   &trans            &trans             &trans     &trans    &trans
                                         &trans   &trans   &trans                                        &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
