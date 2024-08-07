@@ -9,7 +9,7 @@
 #define MACRO_WAIT_TIME 25
 
 / {
-        //-------------Accents Italian-------------
+
         //MACROS
         macros {
                 it_egrav: it_egrav {
@@ -71,6 +71,42 @@
                                 <&kp SQT>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
+                };
+                efp: efp {
+                        compatible = "zmk, behavior-macro";
+                        #bindings = <0>;
+                        bindings
+                                = <&kp UNDERSCORE &kp F &kp P>;
+                };
+                elaugh: elaugh {
+                        compatible = "zmk, behavior-macro";
+                        #bindings = <0>;
+                        bindings
+                                = <&kp UNDERSCORE &kp L &kp A>;        
+                };
+                eok: eok {
+                        compatible = "zmk, behavior-macro";
+                        #bindings = <0>;
+                        bindings
+                                = <&kp UNDERSCORE &kp O &kp K>;        
+                };
+                ethank: ethank {
+                        compatible = "zmk, behavior-macro";
+                        #bindings = <0>;
+                        bindings
+                                = <&kp UNDERSCORE &kp T &kp H>;
+                };
+                esmile: esmile {
+                        compatible = "zmk, behavior-macro";
+                        #bindings = <0>;
+                        bindings
+                                = <&kp UNDERSCORE &kp S &kp M>;
+                };
+                esad: esad {
+                        compatible = "zmk, behavior-macro";
+                        #bindings = <0>;
+                        bindings
+                                = <&kp UNDERSCORE &kp S &kp A &kp D>;
                 };
         };
 
@@ -159,6 +195,7 @@
                         then-layer = <3>;
                 };
         };
+//Behaivors
         behaviors {
         // BackSpace HOLD Tap 
                 bck_ht: bck_ht {
@@ -215,6 +252,13 @@
                         tapping-term-ms = <HOLDTAP>;
                         bindings = <&ht RCMD RET>, <&mo 4>;
                 };
+           // Double Tap for Layer 5 Emoji and HT CMD and Tap Enter
+                tap_layer5:tap_layer5 {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <HOLDTAP>;
+                        bindings = <&ht RCMD RET>, <&mo 5>;
+                };
         };
 
         keymap {
@@ -233,7 +277,7 @@
         AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
         BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
         &kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)     &none  &kp C_MUTE       AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                                &mo 3   &lt 1 SPACE  &ht LCMD RET                          &tap_layer4   &lt 2 SPACE   &kp SPACE
+                        &mo 3   &lt 1 SPACE  &tap_layer5             &tap_layer4   &lt 2 SPACE   &kp SPACE
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -284,8 +328,39 @@
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
+        
+//Layer 5 Emojy and Window Manip_________________________________________________________________________________________________________________________________
+                emojy_layer {
+                        bindings = <
+        &trans   &trans   &trans   &efp     &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &elaugh  &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans   &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
+                                        &trans   &trans   &trans                    &trans   &trans   &trans
+                                >;
+                        sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
+                };
+
         };
 };
+
+
+
+// Windows Manipulations  FUCSIA   Double Tap Press Right+Left   💙 (4)
+//     [
+//         WMOVE, _____,  _____,  EFP, _____,  _____,                                  SHOWDSK,   WGROW,    WSHRI,    _____,   _____, KC.RESET,
+//         _____, ELAUGH, ESMILE, EOK,   ETHANK, ESAD,                                 _____,     WMVL,     WMVR,     _____,   _____, AMRESET,
+//         _____, _____,  _____,  _____, _____,  WFOC,                                 WFOC,      WLCHUP,   WLCHDW,   _____,   _____, _____,
+//         xxxxx, xxxxx,  WMVL,   WMVR,  _____,  _____,                                WSUBMAIN,  WADDMAIN, WMVWINR,  WMVWINL, xxxxx, xxxxx,
+//         xxxxx, xxxxx,  _____,  _____, _____,  _____,                                _____,     _____,    _____,    _____,   xxxxx, xxxxx,
+//     ],
+
+// ELAUGH = send_string('_la')
+// EOK    = send_string('_ok')
+// ETHANK = send_string('_th')
+// ESMILE = send_string('_sm')
+// ESAD   = send_string('_sad')
+// EFP    = send_string('_fp')
+
 
 
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
@@ -294,4 +369,4 @@
         //                                 &trans   &trans   &trans                                 &trans   &trans   &trans   
 
 
-//    
+//   
