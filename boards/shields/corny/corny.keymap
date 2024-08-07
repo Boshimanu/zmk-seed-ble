@@ -249,7 +249,7 @@
                 tap_layer5:tap_layer5 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <90>;//old was hold tap
+                        tapping-term-ms = <140>;//old was hold tap
                         bindings = <&ht RCMD RET>, <&mo 5>;
                 };
         };
