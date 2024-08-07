@@ -92,11 +92,11 @@
                         #binding-cells = <0>;
                         bindings = <&kp UNDERSCORE &kp T &kp H>;
                 };
-                esmile: esmile {
-                        compatible = "zmk, behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp S &kp M>;
-                };
+                // esmile: esmile {
+                //         compatible = "zmk, behavior-macro";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp UNDERSCORE &kp S &kp M>;
+                // };
                 esad: esad {
                         compatible = "zmk, behavior-macro";
                         #binding-cells = <0>;
