@@ -72,11 +72,11 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                // efp: efp {
-                //         compatible = "zmk, behavior-macro";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp UNDERSCORE &kp F &kp P>;
-                // };
+                efp: efp {
+                        compatible = "zmk, behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp UNDERSCORE &kp F &kp P>;
+                };
                 zed_em_kay: zed_em_kay {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
