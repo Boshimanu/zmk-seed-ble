@@ -72,14 +72,6 @@
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
                 };
-                zed_em_kay: zed_em_kay {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings
-                                = <&macro_press &kp LSHFT>
-                                , <&macro_tap &kp Z &kp M &kp K>
-                                , <&macro_release &kp LSHFT>;
-                };
                 efp: efp {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
@@ -331,8 +323,8 @@
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans    &trans   &trans   &trans      &kp H                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans    &trans   &trans   &trans      &zed_em_kay                     &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &efp     &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &elaugh   &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
                                 >;
