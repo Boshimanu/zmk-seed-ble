@@ -9,7 +9,6 @@
 #define MACRO_WAIT_TIME 25
 
 / {
-
         //MACROS
         macros {
                 it_egrav: it_egrav {
@@ -75,12 +74,12 @@
                 efp: efp {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_tap &kp UNDERSCORE &kp F &kp P>;
+                        bindings = <&kp UNDERSCORE &kp F &kp P>;
                 };
                 elaugh: elaugh {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE>;// &kp L &kp A>;        
+                        bindings = <&kp UNDERSCORE &kp L &kp A>;        
                 };
                 eok: eok {
                         compatible = "zmk,behavior-macro";
