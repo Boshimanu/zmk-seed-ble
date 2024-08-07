@@ -77,31 +77,31 @@
                 //         #binding-cells = <0>;
                 //         bindings = <&kp UNDERSCORE &kp F &kp P>;
                 // };
-                elaugh: elaugh {
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE>;// &kp L &kp A>;        
-                };
-                eok: eok {
-                        compatible = "zmk, behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp O &kp K>;        
-                };
-                ethank: ethank {
-                        compatible = "zmk, behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp T &kp H>;
-                };
+                // elaugh: elaugh {
+                //         compatible = "zmk,behavior-macro";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp UNDERSCORE>;// &kp L &kp A>;        
+                // };
+                // eok: eok {
+                //         compatible = "zmk, behavior-macro";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp UNDERSCORE &kp O &kp K>;        
+                // };
+                // ethank: ethank {
+                //         compatible = "zmk, behavior-macro";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp UNDERSCORE &kp T &kp H>;
+                // };
                 // esmile: esmile {
                 //         compatible = "zmk, behavior-macro";
                 //         #binding-cells = <0>;
                 //         bindings = <&kp UNDERSCORE &kp S &kp M>;
                 // };
-                esad: esad {
-                        compatible = "zmk, behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp S &kp A &kp D>;
-                };
+                // esad: esad {
+                //         compatible = "zmk, behavior-macro";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp UNDERSCORE &kp S &kp A &kp D>;
+                // };
         };
 
         //COMBOS
@@ -323,8 +323,8 @@
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans    &trans   &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &elaugh   &trans   &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans   &trans      &kp H                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans   &trans      &trans                            &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
                                 >;
