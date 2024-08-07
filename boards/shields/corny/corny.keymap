@@ -249,7 +249,7 @@
                 tap_layer5:tap_layer5 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <HOLDTAP>;
+                        tapping-term-ms = <90>;//old was hold tap
                         bindings = <&ht RCMD RET>, <&mo 5>;
                 };
         };
@@ -322,7 +322,7 @@
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans    &efp     &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &efp     &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &elaugh   &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
