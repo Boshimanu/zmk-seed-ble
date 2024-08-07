@@ -66,40 +66,46 @@
                         #binding-cells = <0>;
                         bindings 
                                 = <&kp LC(LA(LG(I)))>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp SQT>,
-                                <&macro_wait_time 50>,
+                                <&macro_wait_time MACRO_WAIT_TIME>,
                                 <&kp LC(LA(LG(E)))>;
                 };
                 efp: efp {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp F &kp P>;
+                        bindings = <&kp UNDERSCORE &kp F &kp P>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
                 };
                 elaugh: elaugh {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp L &kp A>;        
+                        bindings = <&kp UNDERSCORE &kp L &kp A>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;     
                 };
                 eok: eok {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp O &kp K>;        
+                        bindings = <&kp UNDERSCORE &kp O &kp K>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;     
                 };
                 ethank: ethank {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp T &kp H>;
+                        bindings = <&kp UNDERSCORE &kp T &kp H>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
                 };
                 esmile: esmile {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp S &kp M>;
+                        bindings = <&kp UNDERSCORE &kp S &kp M>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
                 };
                 esad: esad {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp S &kp A &kp D>;
+                        bindings = <&kp UNDERSCORE &kp S &kp A &kp D>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
                 };
         };
 
