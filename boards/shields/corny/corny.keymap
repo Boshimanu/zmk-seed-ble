@@ -324,7 +324,7 @@
                 emoji_layer {
                         bindings = <
         &trans   &trans    &trans   &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &elaugh   &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &elaugh   &trans   &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
                                 >;
