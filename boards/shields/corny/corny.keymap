@@ -74,37 +74,37 @@
                 };
                 efp: efp {
                         compatible = "zmk, behavior-macro";
-                        #bindings = <0>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&kp UNDERSCORE &kp F &kp P>;
                 };
                 elaugh: elaugh {
                         compatible = "zmk, behavior-macro";
-                        #bindings = <0>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&kp UNDERSCORE &kp L &kp A>;        
                 };
                 eok: eok {
                         compatible = "zmk, behavior-macro";
-                        #bindings = <0>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&kp UNDERSCORE &kp O &kp K>;        
                 };
                 ethank: ethank {
                         compatible = "zmk, behavior-macro";
-                        #bindings = <0>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&kp UNDERSCORE &kp T &kp H>;
                 };
                 esmile: esmile {
                         compatible = "zmk, behavior-macro";
-                        #bindings = <0>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&kp UNDERSCORE &kp S &kp M>;
                 };
                 esad: esad {
                         compatible = "zmk, behavior-macro";
-                        #bindings = <0>;
+                        #binding-cells = <0>;
                         bindings
                                 = <&kp UNDERSCORE &kp S &kp A &kp D>;
                 };
