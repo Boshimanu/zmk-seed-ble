@@ -71,12 +71,12 @@
                                 <&kp SQT>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
-                };
-                efp: efp {
-                        compatible = "zmk, behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&kp UNDERSCORE &kp F &kp P>;
-                };
+                // };
+                // efp: efp {
+                //         compatible = "zmk, behavior-macro";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp UNDERSCORE &kp F &kp P>;
+                // };
                 elaugh: elaugh {
                         compatible = "zmk, behavior-macro";
                         #binding-cells = <0>;
@@ -264,7 +264,7 @@
         // |  TAB      |  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U   |  I  |  O  |  P  |   \  |
         // | Bakcspace |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J   |  K  |  L  |  ;  |   '  |
         // | SHFT      |  Z  |  X  |  C  |  V  |  B  |  None|     |  MUTE   |  N  |  M   |  ,  |  .  |  /  | SHFT |
-        //    4-WinMan+emojy  | 1-Numbers/Space | CMD/Enter |  | CMD/Enter | 2-Arrows  | 3-Italian Accents |
+        //    4-WinMan+emoji  | 1-Numbers/Space | CMD/Enter |  | CMD/Enter | 2-Arrows  | 3-Italian Accents |
         //                                              Vol+    Vol-
         //LA(BACKSPACE) BACKSPACE AS(A)
                 bindings = <
@@ -323,10 +323,10 @@
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
         
-//Layer 5 Emojy and Window Manip_________________________________________________________________________________________________________________________________
-                emojy_layer {
+//Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
+                emoji_layer {
                         bindings = <
-        &trans   &trans   &trans   &efp     &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans   &trans   &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &elaugh  &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans   &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
