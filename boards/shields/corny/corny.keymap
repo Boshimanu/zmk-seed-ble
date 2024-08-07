@@ -77,6 +77,14 @@
                 //         #binding-cells = <0>;
                 //         bindings = <&kp UNDERSCORE &kp F &kp P>;
                 // };
+                zed_em_kay: zed_em_kay {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LSHFT>
+                                , <&macro_tap &kp Z &kp M &kp K>
+                                , <&macro_release &kp LSHFT>;
+                };
                 // elaugh: elaugh {
                 //         compatible = "zmk,behavior-macro";
                 //         #binding-cells = <0>;
@@ -324,7 +332,7 @@
                 emoji_layer {
                         bindings = <
         &trans   &trans    &trans   &trans   &trans      &kp H                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans    &trans   &trans   &trans      &trans                            &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans   &trans      &zed_em_kay                     &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
                                 >;
