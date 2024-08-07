@@ -107,6 +107,24 @@
                         bindings = <&kp UNDERSCORE &kp S &kp A &kp D>,
                                 <&macro_wait_time MACRO_WAIT_TIME>;
                 };
+                elove: elove {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp UNDERSCORE &kp L &kp V>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
+                };
+                ehmmm: ehmmm {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp UNDERSCORE &kp H &kp M>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
+                };
+                ecoffe: ecoffe {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp UNDERSCORE &kp C &kp F>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
+                };
         };
 
         //COMBOS
@@ -292,7 +310,7 @@
                         sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
                 };
 
-//Layer 2________________________________________________________________________________________________________________________________________________
+//Layer 2  Arrows Mouse __________________________________________________________________________________________________________________________________________
                 arrows_layer {
                         bindings = <
         &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &trans                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
@@ -303,7 +321,7 @@
                         sensor-bindings = <&inc_dec_kp UP DOWN>;
                 };
 
-//Layer 3________________________________________________________________________________________________________________________________________________
+//Layer 3  Bluetooth System Layer______________________________________________________________________________________________________________________________
                 bt_layer {
                         bindings = <
         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                           &kp F7     &kp F8   &kp F9   &kp F10    &kp F11  &kp F12
@@ -317,10 +335,10 @@
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans      &trans                         &trans   &trans      &it_u      &trans    &trans    &trans
-        &trans   &it_a    &trans   &trans   &trans      &trans                         &trans   &trans      IT_E       &trans    &it_i     &it_o
-        &trans   &trans   &trans   &trans   &trans      &trans    &none  &trans        &trans   &trans      &trans     &trans    &trans    &trans
-                                        &trans   &trans   &trans                                        &trans   &trans   &trans
+        &trans          &trans         &trans          &trans          &trans           &trans                               &trans          &trans         &it_u           &trans            &trans             &trans
+        &trans          &it_a          &trans          &trans          &trans           &trans                               &trans          &trans         IT_E            &trans            &it_i              &it_o
+        &ht LG(N1) F1   &ht LG(N2) F2  &ht LG(N3) F3   &ht LG(N4) F4   &ht LG(N5) F5    &ht LG(N6) F6     &none  &trans      &ht LG(N7) F7   &ht LG(N8) F8  &ht LG(N9) F9   &ht LG(N10) F10   &ht LG(N11) F11    &ht LG(N12) F12 
+                                        &trans   &trans   &trans                                                                                 &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -328,7 +346,7 @@
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans    &trans   &efp     &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &elove   &efp     &ehmmm      &ecoffe                          &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &elaugh   &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
@@ -340,25 +358,6 @@
 };
 
 
-
-// Windows Manipulations  FUCSIA   Double Tap Press Right+Left   💙 (4)
-//     [
-//         WMOVE, _____,  _____,  EFP, _____,  _____,                                  SHOWDSK,   WGROW,    WSHRI,    _____,   _____, KC.RESET,
-//         _____, ELAUGH, ESMILE, EOK,   ETHANK, ESAD,                                 _____,     WMVL,     WMVR,     _____,   _____, AMRESET,
-//         _____, _____,  _____,  _____, _____,  WFOC,                                 WFOC,      WLCHUP,   WLCHDW,   _____,   _____, _____,
-//         xxxxx, xxxxx,  WMVL,   WMVR,  _____,  _____,                                WSUBMAIN,  WADDMAIN, WMVWINR,  WMVWINL, xxxxx, xxxxx,
-//         xxxxx, xxxxx,  _____,  _____, _____,  _____,                                _____,     _____,    _____,    _____,   xxxxx, xxxxx,
-//     ],
-
-// ELAUGH = send_string('_la')
-// EOK    = send_string('_ok')
-// ETHANK = send_string('_th')
-// ESMILE = send_string('_sm')
-// ESAD   = send_string('_sad')
-// EFP    = send_string('_fp')
-
-
-
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
         // &trans   &trans   &trans   &trans   &trans   &trans                          &trans   &trans   &trans   &trans   &trans   &trans
         // &trans   &trans   &trans   &trans   &trans   &trans   &none &bootloader      &trans   &trans   &trans   &trans   &trans   &trans
@@ -366,3 +365,5 @@
 
 
 //   
+
+// _lv 🥰     _hm 🤔    _cf ☕️      &elove     &ehmmm      &ecoffe
