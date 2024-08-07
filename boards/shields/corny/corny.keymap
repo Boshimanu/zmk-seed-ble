@@ -71,7 +71,7 @@
                                 <&kp SQT>,
                                 <&macro_wait_time 50>,
                                 <&kp LC(LA(LG(E)))>;
-                // };
+                };
                 // efp: efp {
                 //         compatible = "zmk, behavior-macro";
                 //         #binding-cells = <0>;
