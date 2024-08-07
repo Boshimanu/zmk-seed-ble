@@ -323,9 +323,9 @@
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans   &trans   &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &elaugh  &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans   &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans   &trans      &trans                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &elaugh   &esmile  &eok     &ethank     &esad                            &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans   &trans      &trans      &none  &trans        &trans   &trans     &trans     &trans    &trans    &trans
                                         &trans   &trans   &trans                    &trans   &trans   &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
