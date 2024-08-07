@@ -270,7 +270,7 @@
         AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
         BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
         &kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)     &none  &kp C_MUTE       AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                        &mo 5   &lt 1 SPACE  &tap_layer5             &tap_layer4   &lt 2 SPACE   &kp SPACE
+                        &mo 5   &lt 1 SPACE  &&ht RCMD RET             &tap_layer4   &lt 2 SPACE   &kp SPACE
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
