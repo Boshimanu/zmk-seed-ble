@@ -332,12 +332,12 @@
                         sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
                 };
 
-
+// 
 //Layer 4 Italian Accents_______________________________________________________________________________________________________________________________________
                 it_layer {
                         bindings = <
-        &trans          &trans         &trans          &trans          &trans           &trans                                     &trans          &trans         &it_u           &trans            &trans             &trans
-        &trans          &it_a          &trans          &trans          &trans           &trans                                     &trans          &trans         IT_E            &trans            &it_i              &it_o
+        &trans          &trans         &trans          &trans          &trans           &trans                                     &trans          &trans         &it_u           &trans           &trans            &trans
+        &trans          &it_a          &trans          &trans          &trans           &trans                                     &trans          &trans         IT_E            &trans           &it_i             &it_o              &none
         &ht LG(N1) F1   &ht LG(N2) F2  &ht LG(N3) F3   &ht LG(N4) F4   &ht LG(N5) F5    &ht LG(N6) F6       &none    &trans        &ht LG(N7) F7   &ht LG(N8) F8  &ht LG(N9) F9   &ht LG(N0) F10   &ht K_UNDO F11    &ht K_REDO F12
                                         &trans   &trans   &trans                                                                                 &trans   &trans   &trans
                                 >;
