@@ -267,7 +267,7 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <HOLDTAP>;
-                        bindings = <&ht RCMD RET>, <&mo 4>;
+                        bindings = <&ht LG(Y) RET>, <&mo 4>;
                 };
            // Double Tap for Layer 5 Emoji and HT CMD and Tap Enter
                 // tap_layer5:tap_layer5 {
