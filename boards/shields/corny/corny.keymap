@@ -7,6 +7,7 @@
 #define COMBOMS 30
 #define HOLDTAP 165 // Old Value 150
 #define MACRO_WAIT_TIME 25
+#define ENCODER_RESOLUTIONS_RIGHT { 2 }
 
 / {
         //MACROS
@@ -279,6 +280,12 @@
                         if-layers = <1 2>;
                         then-layer = <3>;
                 };
+        };
+
+        sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
         };
 
         keymap {
