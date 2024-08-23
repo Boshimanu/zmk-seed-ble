@@ -140,31 +140,31 @@
                 combo_rcmd {
                         timeout-ms = <COMBOMS>;
                         key-positions = <19 20>;
-                        bindings = <&kp RCMD>;
+                        bindings = <&kp LCMD>;
                 };
                 //Left ALT - RS
                 combo_lalt {
                         timeout-ms = <COMBOMS>;
-                        key-positions = <14 15>;
+                        key-positions = <13 14>;
                         bindings = <&kp LALT>;
                 };
                 //Right ALT - EI
                 combo_ralt {
                         timeout-ms = <COMBOMS>;
-                        key-positions = <20 21>;
-                        bindings = <&kp RALT>;
+                        key-positions = <21 22>;
+                        bindings = <&kp LALT>;
                 };
                 //Left CTRL - AR
                 combo_lctrl {
                         timeout-ms = <COMBOMS>;
-                        key-positions = <13 14>;
+                        key-positions = <14 15>;
                         bindings = <&kp LCTRL>;
                 };
                 //Right CTRL - IO
                 combo_rctrl {
                         timeout-ms = <COMBOMS>;
-                        key-positions = <21 22>;
-                        bindings = <&kp RCTRL>;
+                        key-positions = <20 21>;
+                        bindings = <&kp LCTRL>;
                 };
                 //MEH and Hyper
                                 // //Left MEH - RST - 13 14 15
