@@ -7,7 +7,6 @@
 #define COMBOMS 30
 #define HOLDTAP 165 // Old Value 150
 #define MACRO_WAIT_TIME 25
-#define ENCODER_RESOLUTIONS_RIGHT { 2 }
 
 / {
         //MACROS
@@ -281,8 +280,6 @@
                         then-layer = <3>;
                 };
         };
-        
-        &right_encoder { resolution = <2>; };
 
         keymap {
                 compatible = "zmk,keymap";
