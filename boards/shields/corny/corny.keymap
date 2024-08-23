@@ -166,30 +166,31 @@
                         key-positions = <21 22>;
                         bindings = <&kp RCTRL>;
                 };
-                //Left MEH - RST - 13 14 15
-                combo_lmeh {
-                        timeout-ms = <COMBOMS>;
-                        key-positions = <14 15 16>;
-                        bindings = <&kp LC(LA(LEFT_SHIFT))>;
-                };
-                //Right MEH - NEI - 19 20 21
-                combo_rmeh {
-                        timeout-ms = <COMBOMS>;
-                        key-positions = <19 20 21>;
-                        bindings = <&kp RC(RA(RIGHT_SHIFT))>;
-                }; 
-                //Left Hyper - ARST - 13 14 15 16
-                combo_lhyp {
-                        timeout-ms = <COMBOMS>;
-                        key-positions = <13 14 15 16>;
-                        bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>;
-                };
-                //Rihgt Hyper - NEIO - 19 20 21 22
-                combo_rhyp {
-                        timeout-ms = <COMBOMS>;
-                        key-positions = <19 20 21 22>;
-                        bindings = <&kp RC(RA(RG(RIGHT_SHIFT)))>;
-                };
+                //MEH and Hyper
+                                // //Left MEH - RST - 13 14 15
+                                // combo_lmeh {
+                                //         timeout-ms = <COMBOMS>;
+                                //         key-positions = <14 15 16>;
+                                //         bindings = <&kp LC(LA(LEFT_SHIFT))>;
+                                // };
+                                // //Right MEH - NEI - 19 20 21
+                                // combo_rmeh {
+                                //         timeout-ms = <COMBOMS>;
+                                //         key-positions = <19 20 21>;
+                                //         bindings = <&kp RC(RA(RIGHT_SHIFT))>;
+                                // }; 
+                                // //Left Hyper - ARST - 13 14 15 16
+                                // combo_lhyp {
+                                //         timeout-ms = <COMBOMS>;
+                                //         key-positions = <13 14 15 16>;
+                                //         bindings = <&kp LC(LA(LG(LEFT_SHIFT)))>;
+                                // };
+                                // //Rihgt Hyper - NEIO - 19 20 21 22
+                                // combo_rhyp {
+                                //         timeout-ms = <COMBOMS>;
+                                //         key-positions = <19 20 21 22>;
+                                //         bindings = <&kp RC(RA(RG(RIGHT_SHIFT)))>;
+                                // };
                 //Escape - WF
                 combo_esc {
                         timeout-ms = <COMBOMS>;
@@ -267,7 +268,8 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <HOLDTAP>;
-                        bindings = <&ht RCMD RET>, <&mo 4>;
+                        bindings = <&lt 2 SPACE>, <&mo 4>; 
+                        // bindings = <&ht RCMD RET>, <&mo 4>;
                 };
            // Double Tap for Layer 5 Emoji and HT CMD and Tap Enter
                 // tap_layer5:tap_layer5 {
@@ -294,7 +296,7 @@
         AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
         BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
         &kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)     &none  &kp C_MUTE       AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                &lt 5 LG(SPACE)  &lt 1 SPACE  &ht RCMD RET             &tap_layer4   &lt 2 SPACE   &kp SPACE
+                &lt 5 LG(SPACE)  &lt 1 SPACE  &ht RCMD RET             &ht RCMD RET   &tap_layer   &kp SPACE
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -304,17 +306,24 @@
                         bindings = <
         &trans       AS(LBKT)    AS(RBKT)    &kp LPAR   &kp RPAR  &mk_capt                               &trans     &trans     &trans   &trans   &trans     &kp CAPS
         &trans       AS(N1)      AS(N2)      AS(N3)     AS(N4)    AS(N5)                                 AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
-        &trans       &trans      &kp LBKT    &kp RBKT   &kp LPAR  &kp LA(LS(O))   &none    &trans  &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
+        &trans       &trans      &kp LBKT    &kp RBKT   &kp LPAR  &kp LA(LS(O))   &none    &trans        &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
                                                 &trans  &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
                 };
 
-//Layer 2  Arrows Mouse __________________________________________________________________________________________________________________________________________
+//Layer 2  Arrows Mouse __________________________________________________________________________________________________________________________________________ 
+        // --------------------------------------------------------------------------------------------------------
+        // |  TAB      |  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U   |  I  |  O  |  P  | Omnifocus new Child      |
+        // | Bakcspace |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J   |  K  |  L  |  ;  | Omnifocus show/hide Note |
+        // | SHFT      |  Z  |  X  |  C  |  V  |  B  |  None|     |  MUTE   |  N  |  M   |  ,  |  .  |  /  | Omnifocus New Task       |
+        //    4-WinMan+emoji  | 1-Numbers/Space | CMD/Enter |  | CMD/Enter | 2-Arrows  | 3-Italian Accents |
+        //                                              Vol+    Vol-
+        //LA(BACKSPACE) BACKSPACE AS(A)
                 arrows_layer {
                         bindings = <
         &trans &kp EXCL &kp AT &kp HASH &kp DLLR  &trans                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
-        &trans &trans   &trans &trans   &trans    &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))
+        &trans &trans   &trans &trans   &trans    &trans                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
         &trans &trans   &trans &trans   &trans    &trans    &none  &kp LG(A)   &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
                                 &kp LGUI  &trans   &kp SPACE                &kp RET   &trans    &kp LALT
                         >;
@@ -354,7 +363,6 @@
                                 >;
                         sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT)>;
                 };
-
         };
 };
 
@@ -369,4 +377,4 @@
 
 //   
 
-// _lv 🥰     _hm 🤔    _cf ☕️      &elove     &ehmmm      &ecoffe
+// _lv 🥰     _hm 🤔    _cf ☕️      &elove     &ehmmm      &ecoffe 🤦‍♂️😂😁👍🙏😔🥰🤔☕️☕️☕️_☕️cfq☕️qq     🤔🥰🥰🤦‍♂️🤔😂😁👍😔
