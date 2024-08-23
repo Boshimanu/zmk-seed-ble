@@ -281,6 +281,8 @@
                         then-layer = <3>;
                 };
         };
+        
+        &right_encoder { resolution = <2>; };
 
         keymap {
                 compatible = "zmk,keymap";
