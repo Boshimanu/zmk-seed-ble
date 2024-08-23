@@ -206,13 +206,6 @@
                 
         };
 
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-                tri_layer {
-                        if-layers = <1 2>;
-                        then-layer = <3>;
-                };
-        };
 //Behaivors
         behaviors {
         // BackSpace HOLD Tap 
@@ -278,6 +271,14 @@
                 //         tapping-term-ms = <140>;//old was hold tap
                 //         bindings = <&ht RCMD RET>, <&mo 5>;
                 // };
+        };
+        
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                        if-layers = <1 2>;
+                        then-layer = <3>;
+                };
         };
 
         keymap {
