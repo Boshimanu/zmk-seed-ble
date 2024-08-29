@@ -260,7 +260,7 @@
                 tap_layer4:tap_layer4 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <HOLDTAP>;
+                        tapping-term-ms =<140>;
                         bindings = <&lt 2 SPACE>, <&mo 4>; 
                         // bindings = <&ht RCMD RET>, <&mo 4>;
                 };
@@ -297,7 +297,7 @@
         AS(TAB)    AS(Q) AS(W) AS(F) AS(P) AS(G)                             AS(J) AS(L)  AS(U)     AS(Y)   AS(SEMI)  AS(BSLH)
         BCK        AS(A) AS(R) AS(S) AS(T) AS(D)                             AS(H) AS(N)  AS(E)     AS(I)   AS(O)     AS(SQT)
         &kp LSHFT  AS(Z) AS(X) AS(C) AS(V) AS(B)     &none  &kp C_MUTE       AS(K) AS(M)  AS(COMMA) AS(DOT) AS(SLASH) &kp RSHFT
-                &lt 5 LG(SPACE)  &lt 1 SPACE  &ht RCMD RET             &ht RCMD RET   &tap_layer4   &kp SPACE
+                &lt 5 LG(SPACE)  &lt 1 SPACE  &ht RCMD RET             &ht RCMD RET      &lt 2 SPACE    &mo 4
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
