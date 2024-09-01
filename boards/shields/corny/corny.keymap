@@ -257,13 +257,13 @@
                         bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
                 };
         // Double Tap for Layer 4 and HT CMD and Tap Enter
-                tap_layer4:tap_layer4 {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms =<140>;
-                        bindings = <&lt 2 SPACE>, <&mo 4>; 
-                        // bindings = <&ht RCMD RET>, <&mo 4>;
-                };
+                // tap_layer4:tap_layer4 {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms =<140>;
+                //         bindings = <&lt 2 SPACE>, <&mo 4>; 
+                //                         // bindings = <&ht RCMD RET>, <&mo 4>;
+                // };
            // Double Tap for Layer 5 Emoji and HT CMD and Tap Enter
                 // tap_layer5:tap_layer5 {
                 //         compatible = "zmk,behavior-tap-dance";
