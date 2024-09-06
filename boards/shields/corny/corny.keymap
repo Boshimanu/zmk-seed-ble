@@ -257,12 +257,12 @@
                         tapping-term-ms = <HOLDTAP>; //old 200
                         bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
                 };
-        // Capture Screen Key TAP Dance
+        // Tap Dance Amethyst Full Screen window Mode and 2 panes
                 dt_ameth: dt_ameth {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <HOLDTAP>; //old 200
-                        bindings = <&kp LA(LS(O))>, <&kp LA(LS(D))>;
+                        bindings = <&kp LA(LS(O))>, <&kp LA(LS(D))>,  <&kp LA(LS(J))>;
                 };
         // Double Tap for Layer 4 and HT CMD and Tap Enter
                 // tap_layer4:tap_layer4 {
