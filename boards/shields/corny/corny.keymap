@@ -316,7 +316,7 @@
         &trans       AS(LBKT)    AS(RBKT)    &kp LPAR       &kp RPAR       &mk_capt                                             &trans     &trans     &trans   &trans   &trans     &kp CAPS
         &trans       AS(N1)      AS(N2)      AS(N3)         AS(N4)         AS(N5)                                               AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
         &trans       &trans      &kp LBKT    &kp LC(LEFT)   &kp LC(RIGHT)  &dt_ameth       &none    &kp LC(LA(LS(Z)))           &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
-                                                &kp LC(LS(B))  &trans &trans                        &trans  &trans  &trans
+                                                &kp LA(LS(B))  &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
                 };
