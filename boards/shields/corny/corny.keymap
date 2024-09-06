@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #define AS(keycode) &as LS(keycode) keycode             // Autoshift 
+//#define DT(keycode) &dt keycode keycode                 // Double Tap
 #define BCK &bck_ht LA(BACKSPACE) BACKSPACE             // BackSpace
 #define IT_E &it_e 0
 #define COMBOMS 30
@@ -251,10 +252,17 @@
                 };
         // Capture Screen Key TAP Dance
                 mk_capt: tap_dance_mod_tap {
-                        compatible = "zmk,behavior-tap-dance";
+                        compatible = "zmk,behavior-tap-dance"; 
                         #binding-cells = <0>;
                         tapping-term-ms = <HOLDTAP>; //old 200
                         bindings = <&mt LG(LC(LS(N4)))  LG(LS(N2))>, <&mt LG(LS(N5))  LG(LS(N4))>;
+                };
+        // Capture Screen Key TAP Dance
+                dt_ameth: dt_ameth {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <HOLDTAP>; //old 200
+                        bindings = <&kp LA(LS(O))>, <&kp LC(LS(D))>;
                 };
         // Double Tap for Layer 4 and HT CMD and Tap Enter
                 // tap_layer4:tap_layer4 {
@@ -307,7 +315,7 @@
                         bindings = <
         &trans       AS(LBKT)    AS(RBKT)    &kp LPAR       &kp RPAR       &mk_capt                                             &trans     &trans     &trans   &trans   &trans     &kp CAPS
         &trans       AS(N1)      AS(N2)      AS(N3)         AS(N4)         AS(N5)                                               AS(N6)     AS(N7)     AS(N8)   AS(N9)   AS(N0)     AS(EQUAL)
-        &trans       &trans      &kp LBKT    &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(LS(O))   &none    &kp LC(LA(LS(Z)))           &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
+        &trans       &trans      &kp LBKT    &kp LC(LEFT)   &kp LC(RIGHT)  &dt_ameth       &none    &kp LC(LA(LS(Z)))           &kp PLUS   AS(MINUS)  &trans   &trans   &trans     AS(GRAVE)  
                                                 &trans  &trans &trans                        &trans  &trans  &trans
                         >;
                         sensor-bindings = <&inc_dec_kp C_BRI_INC C_BRI_DEC>;
