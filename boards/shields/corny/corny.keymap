@@ -262,7 +262,7 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <HOLDTAP>; //old 200
-                        bindings = <&kp LA(LS(O))>, <&kp LC(LS(D))>;
+                        bindings = <&kp LA(LS(O))>, <&kp LA(LS(D))>;
                 };
         // Double Tap for Layer 4 and HT CMD and Tap Enter
                 // tap_layer4:tap_layer4 {
