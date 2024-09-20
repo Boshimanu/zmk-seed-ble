@@ -244,9 +244,9 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "ZM_autoshift";
                         #binding-cells = <2>;
-                        tapping-term-ms = <HOLDTAP>; //prev was 140
-                        quick-tap-ms = <50>; // 50 I think is the sweet Spot for this settings
-                        require-prior-idle-ms = <50>; // 50 I think this is the sweet spot for this settings
+                        tapping-term-ms = <150>; //prev was 140 HOLDTAP
+                        quick-tap-ms = <-1>; // 50 I think is the sweet Spot for this settings
+                        //require-prior-idle-ms = <50>; // 50 I think this is the sweet spot for this settings
                         flavor = "balanced";
                         bindings = <&kp &kp>;
                 };
