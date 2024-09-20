@@ -247,7 +247,7 @@
                         tapping-term-ms = <170>; //prev was 140 HOLDTAP=165 at the moment
                         //quick-tap-ms = <50>; // 50 I think is the sweet Spot for this settings
                         //require-prior-idle-ms = <50>; // 50 I think this is the sweet spot for this settings
-                        flavor = "balanced";
+                        flavor = "hold-preferred"; // balanced
                         bindings = <&kp &kp>;
                 };
         // Capture Screen Key TAP Dance
