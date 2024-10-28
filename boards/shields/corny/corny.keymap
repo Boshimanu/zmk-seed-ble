@@ -375,10 +375,10 @@ BCK        &hm LCTRL A  &hm LALT R  &hm LSHFT S  &hm LGUI T &kp D               
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans    &elove   &efp     &ehmmm      &ecoffe                                      &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &elaugh   &esmile  &eok     &ethank     &esad                                        &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans    &trans   &trans   &trans      &trans      &none    LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
-                                             &trans      &trans      &trans                           &trans   &trans     &trans
+        &trans   &trans    &elove   &efp     &ehmmm      &ecoffe                                         &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &elaugh   &esmile  &eok     &ethank     &esad                                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans   &trans      &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
+                                             &trans      &trans      &trans                              &trans   &trans     &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp LC(LG(LA(LS((M))))) LC(LG(LA(LS((N)))))>;
                 };
