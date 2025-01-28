@@ -129,13 +129,13 @@
                 //double cmd and ctrl Press
                 doublecmd: doublecmd{
                         compatible = "zmk,behavior-macro";
-                        #binding-cell = <0>;
+                        #binding-cells = <0>;
                         bindings = <&kp LCMD &kp LCMD>,
                                 <&macro_wait_time MACRO_WAIT_TIME>;
                 };
                 doublectrl: doublectrl{
                         compatible = "zmk,behavior-macro";
-                        #binding-cell = <0>;
+                        #binding-cells = <0>;
                         bindings = <&kp LCTRL &kp LCTRL>,
                                 <&macro_wait_time MACRO_WAIT_TIME>;
                 };
@@ -389,7 +389,7 @@ BCK        &hm LCTRL A  &hm LALT R  &hm LSHFT S  &hm LGUI T &kp D               
                         bindings = <
         &trans   &trans    &elove   &efp          &ehmmm          &ecoffe                                         &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &elaugh   &esmile  &eok          &ethank         &esad                                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans    &trans   &trans        &trans          &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &That    &doublectrl     &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
                                                         &trans      &trans      &trans                              &trans   &trans     &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp LC(LG(LA(LS((M))))) LC(LG(LA(LS((N)))))>;
