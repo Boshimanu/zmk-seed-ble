@@ -136,7 +136,7 @@
                 doublectrl: doublectrl{
                         compatible = "zmk,behavior-macro";
                         #binding-cell = <0>;
-                        bindings = <&kp LCTRL kp& LCTRL>,
+                        bindings = <&kp LCTRL &kp LCTRL>,
                                 <&macro_wait_time MACRO_WAIT_TIME>;
                 };
         };
