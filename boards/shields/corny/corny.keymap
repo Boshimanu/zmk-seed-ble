@@ -389,7 +389,7 @@ BCK        &hm LCTRL A  &hm LALT R  &hm LSHFT S  &hm LGUI T &kp D               
                         bindings = <
         &trans   &trans    &elove   &efp          &ehmmm          &ecoffe                                         &trans   &trans     &trans     &trans    &trans    &trans
         &trans   &elaugh   &esmile  &eok          &ethank         &esad                                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans    &trans   &doublecmd    &doublectrl     &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &trans        &trans          &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
                                                         &trans      &trans      &trans                              &trans   &trans     &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp LC(LG(LA(LS((M))))) LC(LG(LA(LS((N)))))>;
