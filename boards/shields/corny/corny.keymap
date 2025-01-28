@@ -126,6 +126,19 @@
                         bindings = <&kp UNDERSCORE &kp C &kp F>,
                                 <&macro_wait_time MACRO_WAIT_TIME>;
                 };
+                //double cmd and ctrl Press
+                doublecmd: doublecmd{
+                        compatible = "zmk,behavior-macro";
+                        #binding-cell = <0>;
+                        bindings = <&kp LCMD &kp LCMD>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
+                };
+                doublectrl: doublectrl{
+                        compatible = "zmk,behavior-macro";
+                        #binding-cell = <0>;
+                        bindings = <&kp LCTRL kp& LCTRL>,
+                                <&macro_wait_time MACRO_WAIT_TIME>;
+                };
         };
 
 //COMBOS
@@ -204,7 +217,6 @@
                         key-positions = <3 4>; 
                         bindings = <&kp DEL>;
                 };
-                
         };
 
 //Behaivors
@@ -375,10 +387,10 @@ BCK        &hm LCTRL A  &hm LALT R  &hm LSHFT S  &hm LGUI T &kp D               
 //Layer 5 Emoji and Window Manip_________________________________________________________________________________________________________________________________
                 emoji_layer {
                         bindings = <
-        &trans   &trans    &elove   &efp     &ehmmm      &ecoffe                                         &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &elaugh   &esmile  &eok     &ethank     &esad                                           &trans   &trans     &trans     &trans    &trans    &trans
-        &trans   &trans    &trans   &trans   &trans      &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
-                                             &trans      &trans      &trans                              &trans   &trans     &trans
+        &trans   &trans    &elove   &efp          &ehmmm          &ecoffe                                         &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &elaugh   &esmile  &eok          &ethank         &esad                                           &trans   &trans     &trans     &trans    &trans    &trans
+        &trans   &trans    &trans   &doublecmd    &doublectrl     &trans      &none   &kp LC(LG(LA(LS((P)))))     &trans   &trans     &trans     &trans    &trans    &trans
+                                                        &trans      &trans      &trans                              &trans   &trans     &trans
                                 >;
                         sensor-bindings = <&inc_dec_kp LC(LG(LA(LS((M))))) LC(LG(LA(LS((N)))))>;
                 };
