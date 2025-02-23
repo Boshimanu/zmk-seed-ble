@@ -353,9 +353,9 @@ BCK        &hm LCTRL A  &hm LALT R  &hm LSHFT S  &hm LGUI T &kp D               
         //LA(BACKSPACE) BACKSPACE AS(A)
                 arrows_layer {
                         bindings = <
-&trans &trans   &msc SCRL_DOWN   &mmv MOVE_UP     &msc SCRL_UP       &kp C_VOL_UP                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
-&trans &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &kp C_VOL_DN                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
-&trans &trans   &msc SCRL_LEFT   &trans           &msc SCRL_RIGHT    &kp LCMD        &none   &kp LG(A)  &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
+&trans   &trans   &trans           &mmv MOVE_UP     &trans             &kp C_VOL_UP                       &kp DEL      &kp LA(LEFT)  &kp UP   &kp LA(RIGHT)  &kp PG_UP  &kp LG(LS(RBKT))
+&trans   &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &kp C_VOL_DN                       &kp LG(UP)   &kp LEFT      &kp DOWN &kp RIGHT      &kp PG_DN  &kp LG(LA(SQT))  
+&trans   &trans   &trans           &trans           &trans             &kp LCMD        &none   &kp LG(A)  &kp LG(DOWN) &kp LG(LEFT)  &kp LBRC &kp LG(RIGHT)  &kp HOME   &kp LA(LC(SPACE))
                             &mkp RCLK  &mkp MCLK     &mkp LCLK                                  &kp RET   &trans    &kp LALT
                         >;
                         sensor-bindings = <&inc_dec_kp UP DOWN>;
