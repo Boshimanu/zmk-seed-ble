@@ -10,7 +10,7 @@
 
 / {
     chosen {
-        zmk,physical-layout = &foostan_corny_6col_layout;
+        zmk,physical-layout = &foostan_corne_6col_layout;
 
         // zmk,physical-layout = &foostan_corne_5col_layout;
     };
