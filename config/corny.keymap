@@ -57,6 +57,8 @@
 &kp LSHFT   &trans        &trans        &trans        &trans        &trans        &none  &none  &trans    &trans    &trans    &trans     &trans  &trans
                                         &kp LGUI      &trans        &kp SPACE                   &kp RET   &trans    &kp RALT
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         raise_layer {
